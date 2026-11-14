@@ -1,0 +1,19 @@
+{
+  "latestVersion": "1.3.4",
+  "minSupportedVersion": "1.3.4",
+  "latestBuildNumber": 134,
+  "minSupportedBuildNumber": 134,
+  "forceUpdate": true,
+  "title": "Protocol Upgrade Required",
+  "message": "A critical system upgrade has been deployed. To protect your streak integrity, sync protocol, and access new sovereign features, you must update to the latest version of Arcrise.",
+  "releaseNotes": [
+    "Sovereign Founder Gifting Suite & VIP pass engine",
+    "Universal 1-tap Gift Code redemption in Profile, Pro & Arc Menu",
+    "Instant obsidian skeleton dashboard loading on boot",
+    "Enhanced Quotes Deck gesture physics & smooth swiping",
+    "Mandatory version enforcement & update gate"
+  ],
+  "apkDownloadUrl": "https://github.com/Azhar0209/Arcrise/raw/main/apk/Arcrise-v1.3.4-debug.apk",
+  "githubReleaseUrl": "https://github.com/Azhar0209/Arcrise",
+  "publishedAt": "2026-11-14T23:25:00Z"
+}

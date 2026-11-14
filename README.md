@@ -6,7 +6,7 @@
 [![React](https://img.shields.io/badge/React-18-blue.svg?style=flat-square)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-5-purple.svg?style=flat-square)](https://vitejs.dev)
 [![Capacitor](https://img.shields.io/badge/Capacitor-6-cyan.svg?style=flat-square)](https://capacitorjs.com)
-[![Tests](https://img.shields.io/badge/Tests-17%2F17%20Passed-success.svg?style=flat-square)](test/run_all_tests.js)
+[![Tests](https://img.shields.io/badge/Tests-18%2F18%20Passed-success.svg?style=flat-square)](test/run_all_tests.js)
 [![Official Website](https://img.shields.io/badge/Website-arcrise.netlify.app-gold.svg?style=flat-square)](https://arcrise.netlify.app)
 
 > **Become who you set out to be.**  
@@ -38,7 +38,7 @@ The official compiled Android Application Packages are organized in the [`apk/`]
 
 | Version | Status | Download Link | Key Changes |
 | :--- | :--- | :--- | :--- |
-| **`v1.3.4`** | **🔥 Latest (Recommended)** | [**Download Arcrise-v1.3.4-debug.apk**](apk/Arcrise-v1.3.4-debug.apk) | Full-screen animated Sovereign Error Page (zero popup alerts), Global Error Boundary, silky-smooth opening animation, dynamic quotes card depth physics & velocity flick gestures |
+| **`v1.3.4`** | **🔥 Latest (Recommended)** | [**Download Arcrise-v1.3.4-debug.apk**](apk/Arcrise-v1.3.4-debug.apk) | Sovereign Force Upgrade Protocol (blocks old APKs), full-screen animated Error Page, universal redeem, skeleton dashboard loading, and silky quotes gestures |
 | **`v1.3.3`** | Stable | [Arcrise-v1.3.3-debug.apk](apk/Arcrise-v1.3.3-debug.apk) | Sovereign Founder Gifting Suite, VIP Whitelist engine, WhatsApp 1-tap code sharing, and Gift Code redemption |
 | **`v1.3.2`** | Stable | [Arcrise-v1.3.2-debug.apk](apk/Arcrise-v1.3.2-debug.apk) | 3D Card photo customizer with size & alignment sliders, 24K gold strap, automatic Lifetime Pro for Founder |
 | **`v1.3.1`** | Stable | [Arcrise-v1.3.1-debug.apk](apk/Arcrise-v1.3.1-debug.apk) | Netbanking in-app modal dialog, crash resolution, subscription availability timeline |

@@ -20,24 +20,23 @@ Official distribution channel for ARCRISE Android Application Packages (`.apk`).
 
 ## 📋 Version History & Changelog
 
-### **v1.3.4 — Animated Sovereign Error Page, Global Error Boundary & Silky Quotes Physics** *(Latest)*
-- **Full-Screen Animated Sovereign Error Screen (Zero Popups)**:
-  - Eliminated all clunky recovery popups, raw banners, and standard modal error dialogs.
-  - Built full-screen, OLED black animated recovery page featuring an orbital shield radar graphic, luminous cyan glow, copyable diagnostic stack trace button with tactile feedback, and dual recovery actions: **"Re-engage Protocol"** and **"Return to Dashboard"**.
-  - Integrated `GlobalErrorBoundary` across the React root component tree to catch uncaught render crashes gracefully.
-- **Silky-Smooth Opening Splash Screen**:
-  - Replaced abrupt 20x zoom and stark white flashes with Apple-grade spring physics (`cubic-bezier(0.16, 1, 0.3, 1)`).
-  - High-res frosted glass emblem capsule with radiant glow, tracked luxury wordmark, and micro-hairline progress glide.
-- **Buttery-Smooth Quotes Card Deck & Inspiration Physics**:
-  - Rebuilt quotes card swipe engine with real-time multi-card dynamic depth stack physics. Dragging the top card dynamically un-tilts the middle card and brings the deep card forward proportionally to touch displacement.
-  - Added velocity flick detection (`vx > 0.36 px/ms` and `t < 280ms`) for effortless one-handed flick gestures.
-  - Eliminated CSS keyframe jitter during pointer drag interactions.
-- **Expiring Single-Use Gift Codes (48–72h Lifecycle)**:
-  - Added cryptographic expiry window options (24h, 48h, 72h, or Permanent).
-  - One-time redemption enforcement: codes self-destruct once redeemed by an athlete.
-- **Universal Profile Picture Visibility & 3D Card Lanyard Hardening**:
-  - Full-resolution photo synchronization across all athlete profiles, squad feeds, and community leaderboards.
-  - WebGL context loss protection and graceful 2D tactile badge fallback for older Android devices.
+### **v1.3.4 (Build 134) — Sovereign Force Upgrade Protocol, Gifting Layout & Quotes Fixes** *(Latest)*
+- **Enforced Protocol Upgrade Gate (Mandatory Version Enforcer)**:
+  - Older or deprecated APKs are immediately hard-locked with an uncloseable full-screen upgrade barrier.
+  - Prevents athletes from running outdated builds when a new release is deployed, safeguarding data schemas, streak integrity, and security.
+  - Dual-tier remote policy check: reads live `version.json` (GitHub/Netlify CDN) and Firestore `system_config/app_version` with offline cache persistence.
+  - Hardware back button lockdown: prevents dismissing the update screen on Android devices.
+  - Direct 1-tap APK download button and live "Check for Protocol Updates" button in Settings and Founder Gifting Console.
+- **Sovereign Gifting Console Layout Overhaul**:
+  - Fixed horizontal overflow and text clipping on mobile viewports.
+  - Converted Master VIP and Custom Code rows into responsive stacked cards with 2-column full-width `[ 📋 Copy Code ]` and `[ 💬 WhatsApp ]` buttons.
+- **Universal Gift Code Redemption**:
+  - Prominent gold **`🎟️ Redeem Gift Code / VIP Pass`** button now accessible from Profile Screen, Pro Hub, and Arc Executive Slide Menu for all athletes.
+- **Instant Obsidian Skeleton Loading**:
+  - Eliminated initial empty black space on startup with pure-CSS and React dashboard shimmer skeleton.
+- **Quotes Deck Swipe Physics & Touch Isolation**:
+  - Fixed swipe-to-flip conflict (drag distance suppresses click flip).
+  - Isolated vertical scrolling (`touch-action: pan-y`) so habit scrolling is never hijacked.
 
 ---
 
