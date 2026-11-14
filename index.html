@@ -29,13 +29,13 @@
     --bg-card-elevated: var(--arc-panel-bg, #15151E);
     --border: var(--arc-line-border, rgba(255, 255, 255, 0.08));
     --border-hover: rgba(255, 255, 255, 0.18);
-    --border-violet: rgba(124, 92, 255, 0.35);
+    --border-violet: rgba(224, 35, 28, 0.28);
     --border-ember: rgba(255, 30, 60, 0.35);
     --border-gold: rgba(212, 175, 55, 0.35);
 
     /* Tri-Accent System: Violet (Brand/Nav) + Ember (Fire/Urgency) + Gold (Prestige/XP) */
-    --violet: #7C5CFF;
-    --violet-glow: rgba(124, 92, 255, 0.28);
+    --violet: #E0231C;
+    --violet-glow: rgba(224, 35, 28, 0.2);
     --violet-gradient: linear-gradient(135deg, #7C5CFF 0%, #5A35E0 100%);
 
     --ember: #FF1E3C;
@@ -96,7 +96,7 @@
     background-color: var(--bg);
     background-image: 
       radial-gradient(ellipse 120% 60% at 50% 0%, #15151E 0%, #0B0B0F 55%),
-      radial-gradient(circle at 85% 20%, rgba(124, 92, 255, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 85% 20%, rgba(224, 35, 28, 0.04) 0%, transparent 40%),
       radial-gradient(circle at 15% 60%, rgba(255, 30, 60, 0.05) 0%, transparent 40%),
       radial-gradient(circle at 80% 85%, rgba(212, 175, 55, 0.04) 0%, transparent 40%);
     background-attachment: fixed;
@@ -166,7 +166,7 @@
   }
   .badge-violet {
     background: rgba(124, 92, 255, 0.12);
-    border-color: rgba(124, 92, 255, 0.35);
+    border-color: rgba(224, 35, 28, 0.25);
     color: #B4A0FF;
   }
   .badge-ember {
@@ -208,8 +208,12 @@
     box-shadow: 0 4px 20px var(--ember-glow), inset 0 1px 0 rgba(255, 255, 255, 0.25);
   }
   .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(255, 30, 60, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    background: #E8332C;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(224, 35, 28, 0.35);
+  }
+  .btn-primary:active {
+    transform: translateY(1px);
   }
   .btn-primary:active { transform: translateY(0); }
   .btn-secondary {
@@ -498,7 +502,7 @@
     transform: translateX(-50%);
     width: 600px;
     height: 400px;
-    background: radial-gradient(ellipse at center, rgba(124, 92, 255, 0.16) 0%, rgba(255, 30, 60, 0.08) 45%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(224, 35, 28, 0.08) 0%, rgba(255, 30, 60, 0.08) 45%, transparent 70%);
     filter: blur(50px);
     pointer-events: none;
     z-index: 0;
@@ -541,9 +545,9 @@
     letter-spacing: 0.01em;
     margin-bottom: 22px;
     text-transform: uppercase;
-    background: linear-gradient(180deg, #FFFFFF 10%, #E2E8F2 65%, #94A0B2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #FFFFFF;
+    background: none;
+    -webkit-text-fill-color: #FFFFFF;
   }
   .hero-lead {
     font-size: clamp(16px, 2.2vw, 19px);
@@ -586,18 +590,16 @@
   /* Realistic Phone Frame */
   .phone-frame {
     position: relative;
-    width: 320px;
-    height: 650px;
     background: #000000;
-    border-radius: 46px;
-    padding: 12px;
+    border-radius: 44px;
+    padding: 8px;
     box-shadow: 
-      0 0 0 2px rgba(255, 255, 255, 0.12),
-      0 0 0 6px #1A1A22,
-      0 25px 60px rgba(0, 0, 0, 0.85),
-      0 0 80px rgba(255, 30, 60, 0.18);
-    transform: rotateX(8deg) translateY(-10px);
-    transition: transform 0.5s var(--ease-out);
+      inset 0 1px 1px rgba(255, 255, 255, 0.2),
+      inset 0 -1px 1px rgba(0, 0, 0, 0.9),
+      0 0 0 1px rgba(255, 255, 255, 0.08),
+      0 18px 45px rgba(0, 0, 0, 0.85),
+      0 0 60px rgba(224, 35, 28, 0.1);
+    transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);
     z-index: 2;
   }
   .phone-frame:hover {
@@ -759,10 +761,10 @@
     border-color: var(--border-hover);
   }
   .showcase-tab.active {
-    background: rgba(124, 92, 255, 0.14);
+    background: rgba(224, 35, 28, 0.1);
     border-color: var(--violet);
     color: #FFFFFF;
-    box-shadow: 0 0 16px rgba(124, 92, 255, 0.35);
+    box-shadow: 0 0 16px rgba(224, 35, 28, 0.25);
   }
 
   .showcase-viewer {
@@ -777,8 +779,9 @@
     align-items: center;
   }
   .showcase-img-stage {
-    background: radial-gradient(circle at center, #1E1E26 0%, #101014 80%);
-    padding: 40px;
+    background: radial-gradient(ellipse 90% 75% at 50% 50%, #15151B 0%, #0B0B0E 100%);
+    position: relative;
+    padding: 36px 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1139,7 +1142,7 @@
     line-height: 1.6;
   }
   .evolution-callout {
-    background: linear-gradient(135deg, rgba(124, 92, 255, 0.08) 0%, rgba(212, 175, 55, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(224, 35, 28, 0.04) 0%, rgba(212, 175, 55, 0.05) 100%);
     border: 1px solid rgba(124, 92, 255, 0.25);
     border-radius: var(--radius-md);
     padding: 24px 30px;
@@ -1167,7 +1170,7 @@
 
   /* Progression Tiers Grid */
   .progression-section {
-    background: linear-gradient(180deg, transparent 0%, rgba(124, 92, 255, 0.04) 50%, transparent 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.02) 50%, transparent 100%);
     padding: 100px 0;
   }
   .tier-cards {
@@ -1265,7 +1268,7 @@
   }
   .register-card {
     background: radial-gradient(circle at 50% -20%, rgba(255, 30, 60, 0.16) 0%, transparent 55%),
-                radial-gradient(circle at 10% 100%, rgba(124, 92, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 10% 100%, rgba(224, 35, 28, 0.04) 0%, transparent 50%),
                 var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: var(--radius-lg);
@@ -1462,20 +1465,16 @@
     transition: width 0.08s ease-out;
   }
 
-  /* Reveal Animations with Smooth Blur and Scale */
+  /* Crisp Solid Sections (Zero AI scroll-blur lag) */
   .reveal {
-    opacity: 0;
-    transform: translateY(32px) scale(0.985);
-    filter: blur(8px);
-    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-                filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: opacity, transform, filter;
+    opacity: 1;
+    transform: none;
+    filter: none;
   }
   .reveal.active {
     opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
+    transform: none;
+    filter: none;
   }
 
   /* Responsive Breakpoints */
@@ -1516,6 +1515,988 @@
     .phone-frame { transform: none !important; }
     .reveal { opacity: 1 !important; transform: none !important; }
   }
+
+/* ========================================================
+   ARCRISE ELEVATED ADDITIONS: APK, LABS, 26-MODULE GALLERY & MOTIONS
+   ======================================================== */
+.btn-apk-hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  padding: 14px 24px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.28s var(--ease-out);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.btn-apk-hero:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+}
+.apk-size-pill {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(78, 204, 163, 0.18);
+  color: #4ECCA3;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-left: 4px;
+}
+.btn-apk-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-right: 8px;
+}
+.btn-apk-nav:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+/* 3D Tilt Card Base */
+.tilt-card {
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+/* Interactive Labs Section */
+.labs-section {
+  padding: 100px 0;
+  position: relative;
+  background: radial-gradient(ellipse 90% 50% at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.labs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+@media (max-width: 960px) {
+  .labs-grid { grid-template-columns: 1fr; }
+}
+
+.lab-card {
+  background: var(--bg-card-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+.lab-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.lab-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 14px;
+}
+.lab-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  margin: 0 0 10px;
+}
+.lab-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0 0 24px;
+}
+
+/* Hydration Lab Elements */
+.hydration-stage {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 20px;
+}
+.water-flask {
+  width: 90px;
+  height: 140px;
+  border: 3px solid rgba(56, 189, 248, 0.4);
+  border-radius: 14px 14px 24px 24px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(15, 23, 42, 0.6);
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15), inset 0 0 15px rgba(0,0,0,0.5);
+}
+.water-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 60%, #0369a1 100%);
+  transition: height 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 -4px 16px rgba(56, 189, 248, 0.4);
+}
+.water-fill::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+.water-stats-col {
+  flex: 1;
+}
+.water-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+.water-stat-big {
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: #38bdf8;
+  font-weight: 700;
+  line-height: 1;
+}
+.water-stat-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.water-bar-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 10px 0 14px;
+}
+.water-bar-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #0284c7);
+  transition: width 0.6s ease;
+  border-radius: 999px;
+}
+.water-btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+.btn-water-add {
+  flex: 1;
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  color: #070811;
+  font-weight: 800;
+  font-size: 13.5px;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.35);
+}
+.btn-water-add:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+}
+.btn-water-add:active {
+  transform: translateY(1px);
+}
+.btn-water-reset {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-secondary);
+  font-size: 12.5px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-water-reset:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+.lab-meta-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.lab-meta-pill {
+  font-size: 11.5px;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  color: var(--text-muted);
+}
+.lab-meta-pill strong { color: var(--text-primary); }
+
+/* Macro Lab Elements */
+.macro-slider-box {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.macro-slider-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13.5px;
+  margin-bottom: 12px;
+}
+.macro-weight-display {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--gold);
+  font-weight: 700;
+}
+.macro-range-input {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  outline: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.macro-range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gold);
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+  border: 2px solid #FFFFFF;
+}
+.macro-goals {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+.macro-goal-btn {
+  flex: 1;
+  padding: 9px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.macro-goal-btn.active {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--gold);
+  color: #FFFFFF;
+}
+
+.macro-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 16px;
+}
+.macro-result-chip {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 12px 10px;
+  text-align: center;
+}
+.macro-chip-val {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1;
+}
+.macro-chip-name {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.macro-cal-bar {
+  display: flex;
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 16px;
+  background: rgba(255, 255, 255, 0.06);
+}
+.macro-bar-seg {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+.macro-bar-seg.pro { background: #38bdf8; }
+.macro-bar-seg.carb { background: var(--ember); }
+.macro-bar-seg.fat { background: var(--gold); }
+
+/* 26-Module Showcase Gallery Section */
+.gallery-26-section {
+  padding: 110px 0;
+  position: relative;
+}
+.gallery-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 36px 0 48px;
+}
+.gallery-filter-pill {
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.22s var(--ease-out);
+}
+.gallery-filter-pill:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #FFFFFF;
+}
+.gallery-filter-pill.active {
+  background: #FFFFFF;
+  color: #070811;
+  border-color: #FFFFFF;
+  box-shadow: 0 4px 18px rgba(255, 255, 255, 0.25);
+}
+
+.gallery-26-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 24px;
+}
+.gallery-card {
+  background: var(--bg-card-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform 0.26s ease, border-color 0.26s ease, box-shadow 0.26s ease;
+  display: flex;
+  flex-direction: column;
+}
+.gallery-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+.gallery-thumb-wrap {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 380px;
+  position: relative;
+  background: #000000;
+  overflow: hidden;
+}
+.gallery-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+  display: block;
+}
+.gallery-card:hover .gallery-thumb-wrap img {
+  transform: scale(1.03);
+}
+.gallery-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 8, 17, 0.65);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.24s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-card:hover .gallery-thumb-overlay {
+  opacity: 1;
+}
+.gallery-inspect-btn {
+  background: #FFFFFF;
+  color: #070811;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  transform: translateY(6px);
+  transition: transform 0.2s ease;
+}
+.gallery-card:hover .gallery-inspect-btn {
+  transform: translateY(0);
+}
+.gallery-card-body {
+  padding: 18px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.gallery-card-domain {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--violet);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.gallery-card-title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  color: #FFFFFF;
+  margin: 0 0 6px;
+}
+.gallery-card-desc {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(12px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.24s ease;
+}
+.lightbox-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.lightbox-content {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lightbox-img {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.15);
+}
+.lightbox-caption {
+  margin-top: 14px;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+.lightbox-close-btn {
+  position: absolute;
+  top: -46px;
+  right: 0;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #FFFFFF;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: background 0.2s ease;
+}
+.lightbox-close-btn:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+
+/* ========================================================
+   SCREENSHOT ASPECT RATIO UN-CUT & FIT FIXES
+   ======================================================== */
+.phone-frame {
+  width: 295px !important;
+  max-width: 90vw !important;
+  aspect-ratio: 500 / 828 !important;
+  height: auto !important;
+  max-height: 560px !important;
+  border-radius: 42px !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #000000 !important;
+}
+.phone-screen {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 34px !important;
+  overflow: hidden !important;
+  background: #000000 !important;
+}
+.phone-screen img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+.showcase-screen-wrap {
+  width: 295px !important;
+  max-width: 90vw !important;
+  aspect-ratio: 500 / 828 !important;
+  height: auto !important;
+  max-height: 560px !important;
+  border-radius: 40px !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #000000 !important;
+}
+.showcase-screen-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 32px !important;
+  display: block !important;
+}
+
+.feature-visual-frame {
+  width: 290px !important;
+  max-width: 90vw !important;
+  aspect-ratio: 500 / 828 !important;
+  height: auto !important;
+  max-height: 560px !important;
+  border-radius: 40px !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #000000 !important;
+}
+.feature-visual-frame img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 32px !important;
+  display: block !important;
+}
+
+/* ========================================================
+   CONTINUOUS HORIZONTAL 3D MARQUEE STREAM (SINGLE-LINE, CENTER TILT & BLUR)
+   ======================================================== */
+.marquee-stream-section {
+  padding: 85px 0 115px;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse 100% 50% at 50% 50%, rgba(224, 35, 28, 0.04) 0%, transparent 80%);
+}
+.marquee-stream-wrapper {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+  padding: 35px 0 45px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+.marquee-edge-blur {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(100px, 15vw, 240px);
+  z-index: 50;
+  pointer-events: none;
+}
+.marquee-edge-blur.blur-left {
+  left: 0;
+  background: linear-gradient(to right, #09090B 25%, rgba(9, 9, 11, 0.75) 65%, transparent 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.marquee-edge-blur.blur-right {
+  right: 0;
+  background: linear-gradient(to left, #09090B 25%, rgba(9, 9, 11, 0.75) 65%, transparent 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.single-line-viewport {
+  width: 100%;
+  overflow: visible;
+  perspective: 1300px;
+  perspective-origin: 50% 55%;
+  padding: 25px 0 35px;
+  display: flex;
+}
+
+.marquee-track.single-stream {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+  animation: singleStreamScroll 85s linear infinite;
+  transform-style: preserve-3d;
+  will-change: transform;
+  align-items: center;
+}
+
+@keyframes singleStreamScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-stream-wrapper:hover .single-stream {
+  animation-play-state: paused;
+}
+
+.marquee-phone-card {
+  flex: 0 0 205px;
+  width: 205px;
+  background: #0C0C12;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 26px;
+  padding: 7px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  cursor: pointer;
+  transform-style: preserve-3d;
+  will-change: transform, box-shadow, border-color;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.marquee-phone-card:hover {
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(224, 35, 28, 0.4) !important;
+}
+
+.marquee-phone-chassis {
+  width: 100%;
+  aspect-ratio: 500 / 828 !important;
+  height: auto !important;
+  background: #000000;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marquee-phone-screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marquee-phone-screen img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.marquee-card-meta {
+  padding: 8px 6px 3px;
+  text-align: center;
+}
+.marquee-card-tag {
+  font-size: 9.5px;
+  font-weight: 800;
+  color: var(--violet);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.marquee-card-title {
+  font-family: var(--font-display);
+  font-size: 13.5px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  margin: 3px 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ========================================================
+   ANDROID TEST BUILD SPOTLIGHT BANNER & GITHUB LINK
+   ======================================================== */
+.android-test-spotlight-section {
+  padding: 80px 0 100px;
+  position: relative;
+}
+.android-spotlight-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(20, 25, 35, 0.95) 0%, rgba(11, 14, 20, 0.98) 100%);
+  border: 1px solid rgba(78, 204, 163, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 56px 48px;
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.7), 0 0 50px rgba(78, 204, 163, 0.12);
+}
+@media (max-width: 768px) {
+  .android-spotlight-card { padding: 36px 24px; }
+}
+.android-spotlight-glow {
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(78, 204, 163, 0.22) 0%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+.android-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.android-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(78, 204, 163, 0.15);
+  border: 1px solid rgba(78, 204, 163, 0.4);
+  color: #4ECCA3;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+}
+.android-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ECCA3;
+  box-shadow: 0 0 10px #4ECCA3;
+  animation: pulseDotAnim 1.8s infinite;
+}
+@keyframes pulseDotAnim {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.3); }
+}
+.android-version-pill {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+}
+.android-spotlight-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin: 0 0 18px;
+}
+.gradient-text-emerald {
+  background: linear-gradient(135deg, #A7F3D0 0%, #4ECCA3 50%, #10B981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.android-spotlight-lead {
+  font-size: clamp(15px, 1.8vw, 17.5px);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 800px;
+  margin: 0 0 32px;
+}
+.android-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 38px;
+}
+.android-spec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-md);
+  padding: 16px 14px;
+}
+.android-spec-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+.android-spec-item strong {
+  display: block;
+  font-size: 14px;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+.android-spec-item span {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.android-action-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.btn-android-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #4ECCA3 0%, #10B981 100%);
+  color: #070811;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 800;
+  padding: 16px 28px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(16, 185, 129, 0.4);
+  transition: all 0.25s var(--ease-out);
+}
+.btn-android-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(16, 185, 129, 0.6);
+  color: #000000;
+}
+.btn-sub-badge {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.25);
+  color: #070811;
+  font-weight: 800;
+}
+.btn-github-repo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 16px 26px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.btn-github-repo:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+.android-disclaimer {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Hero Android test pill */
+.hero-android-test-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(78, 204, 163, 0.12);
+  border: 1px solid rgba(78, 204, 163, 0.35);
+  color: #4ECCA3;
+  padding: 7px 16px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+.hero-android-test-pill:hover {
+  background: rgba(78, 204, 163, 0.22);
+  border-color: rgba(78, 204, 163, 0.6);
+  transform: translateY(-1px);
+}
+
 </style>
 </head>
 <body>
@@ -1606,7 +2587,7 @@
     <div class="hero-ambient" aria-hidden="true"></div>
     <div class="wrap hero-content">
       <div class="badge badge-ember" style="margin-bottom: 24px;">
-        ⚡ PRE-REGISTRATION OPEN · EMBARK ON YOUR ARC
+        PRE-REGISTRATION OPEN · EMBARK ON YOUR ARC
       </div>
 
       <div class="hero-symbol-wrapper">
@@ -1619,7 +2600,7 @@
       </h1>
 
       <p class="hero-lead">
-        The disciplined operating system for personal progression. Daily task architecture, structured training routines, consistency heatmaps, and a real community leaderboard—unified into one connected system.
+        The disciplined operating system for personal progression. Daily task architecture, structured training routines, consistency heatmaps, and a real community leaderboard · unified into one connected system.
       </p>
 
       <div class="hero-ctas">
@@ -1787,7 +2768,7 @@
       <div class="feature-row reveal">
         <div class="feature-visual">
           <div class="feature-visual-frame">
-            <img src="assets/screenshots/v5/audit_04_habits_explore.png" alt="Task &amp; Habit Architecture Interface" loading="lazy" />
+            <img src="assets/screenshots/v5/audit_04_habits_explore.png" alt="Task &amp; Habit Architecture Interface" loading="eager" />
           </div>
           <div class="feature-badge-callout">
             <strong>Custom Day Types</strong>
@@ -1817,7 +2798,7 @@
       <div class="feature-row reversed reveal" id="workouts">
         <div class="feature-visual">
           <div class="feature-visual-frame">
-            <img src="assets/screenshots/v5/audit_14_fitness_workouts.png" alt="Structured Athletic Regimens" loading="lazy" />
+            <img src="assets/screenshots/v5/audit_14_fitness_workouts.png" alt="Structured Athletic Regimens" loading="eager" />
           </div>
           <div class="feature-badge-callout">
             <strong>Athletic Regimens</strong>
@@ -1846,7 +2827,7 @@
       <div class="feature-row reveal">
         <div class="feature-visual">
           <div class="feature-visual-frame">
-            <img src="assets/screenshots/v5/audit_07_progress_90day_matrix.png" alt="90-Day Habit Matrix and Heatmap" loading="lazy" />
+            <img src="assets/screenshots/v5/audit_07_progress_90day_matrix.png" alt="90-Day Habit Matrix and Heatmap" loading="eager" />
           </div>
           <div class="feature-badge-callout">
             <strong>90-Day Matrix</strong>
@@ -1875,7 +2856,7 @@
       <div class="feature-row reversed reveal">
         <div class="feature-visual">
           <div class="feature-visual-frame">
-            <img src="assets/screenshots/v5/audit_15_compete_athletes_podium.png" alt="Global Verified Community Leaderboard" loading="lazy" />
+            <img src="assets/screenshots/v5/audit_15_compete_athletes_podium.png" alt="Global Verified Community Leaderboard" loading="eager" />
           </div>
           <div class="feature-badge-callout">
             <strong>Global Podium</strong>
@@ -1904,7 +2885,7 @@
       <div class="feature-row reveal">
         <div class="feature-visual">
           <div class="feature-visual-frame">
-            <img src="assets/screenshots/v5/audit_13_focus_immersion_chamber.png" alt="Focus Immersion Chamber and Deep Work Presets" loading="lazy" />
+            <img src="assets/screenshots/v5/audit_13_focus_immersion_chamber.png" alt="Focus Immersion Chamber and Deep Work Presets" loading="eager" />
           </div>
           <div class="feature-badge-callout">
             <strong>Immersion Chamber</strong>
@@ -1933,7 +2914,7 @@
       <div class="feature-row reversed reveal">
         <div class="feature-visual">
           <div class="feature-visual-frame">
-            <img src="assets/screenshots/v5/audit_09_quests_roadmap.png" alt="Quests Roadmap and Milestone Feats" loading="lazy" />
+            <img src="assets/screenshots/v5/audit_09_quests_roadmap.png" alt="Quests Roadmap and Milestone Feats" loading="eager" />
           </div>
           <div class="feature-badge-callout">
             <strong>RPG Milestones</strong>
@@ -1962,7 +2943,7 @@
       <div class="feature-row reveal">
         <div class="feature-visual">
           <div class="feature-visual-frame">
-            <img src="assets/screenshots/v5/audit_16_compete_squads.png" alt="Squad Battles and Duo Accountability" loading="lazy" />
+            <img src="assets/screenshots/v5/audit_16_compete_squads.png" alt="Squad Battles and Duo Accountability" loading="eager" />
           </div>
           <div class="feature-badge-callout">
             <strong>Collective Discipline</strong>
@@ -1991,7 +2972,7 @@
       <div class="feature-row reversed reveal">
         <div class="feature-visual">
           <div class="feature-visual-frame">
-            <img src="assets/screenshots/v5/audit_22_the_arc_pro_matrix.png" alt="The Arc Pro Feature Matrix" loading="lazy" />
+            <img src="assets/screenshots/v5/audit_22_the_arc_pro_matrix.png" alt="The Arc Pro Feature Matrix" loading="eager" />
           </div>
           <div class="feature-badge-callout">
             <strong>Pro Sovereign</strong>
@@ -2020,7 +3001,7 @@
       <div class="feature-row reveal">
         <div class="feature-visual">
           <div class="feature-visual-frame">
-            <img src="assets/screenshots/v5/audit_11_quests_skill_trees.png" alt="4 Discipline Domain Skill Trees" loading="lazy" />
+            <img src="assets/screenshots/v5/audit_11_quests_skill_trees.png" alt="4 Discipline Domain Skill Trees" loading="eager" />
           </div>
           <div class="feature-badge-callout">
             <strong>RPG Mastery Trees</strong>
@@ -2045,11 +3026,98 @@
         </div>
       </div>
 
+      <!-- Feature 11: Sovereign Hydration Protocol -->
+      <div class="feature-row reveal">
+        <div class="feature-visual">
+          <div class="feature-visual-frame tilt-card">
+            <img src="assets/screenshots/v5/audit_26_water_reminder.png" alt="Sovereign Hydration Protocol Interface" loading="eager" />
+          </div>
+          <div class="feature-badge-callout">
+            <strong>Sovereign Hydration</strong>
+            <span>10 Glasses · 2,500ml acoustic protocol</span>
+          </div>
+        </div>
+        <div class="feature-text-block">
+          <div class="section-tag">CELLULAR PERFORMANCE</div>
+          <h2 class="feature-title">Hydration as a Non-Negotiable Protocol.</h2>
+          <p class="feature-lead">
+            Dehydration degrades cognitive velocity and training output before thirst is even felt. ARCRISE calibrates a 10-glass (2,500ml) daily baseline with single-tap +250ml logging and acoustic chime feedback.
+          </p>
+          <p class="feature-lead" style="font-size: 14.5px; color: var(--text-muted);">
+            Intelligent Quiet Hours (22:00 – 07:00) automatically mute notifications during deep sleep cycles while adaptive daytime pings preserve cellular fluidity without intrusive spam.
+          </p>
+          <div class="feature-pills-list">
+            <span class="f-pill">10-Glass Target (2,500ml)</span>
+            <span class="f-pill">+250ml Single-Tap Quick Log</span>
+            <span class="f-pill">Acoustic Water Chime</span>
+            <span class="f-pill">Quiet Hours Sleep Shield</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 12: Nutrition & Calorie Macro Engine -->
+      <div class="feature-row reversed reveal">
+        <div class="feature-visual">
+          <div class="feature-visual-frame tilt-card">
+            <img src="assets/screenshots/v5/audit_25_calories_macro_engine.png" alt="Nutrition and Calorie Macro Engine" loading="eager" />
+          </div>
+          <div class="feature-badge-callout">
+            <strong>Metabolic Architecture</strong>
+            <span>Mifflin-St Jeor &amp; 2.2g/kg protein targets</span>
+          </div>
+        </div>
+        <div class="feature-text-block">
+          <div class="section-tag">NUTRITION &amp; METABOLISM</div>
+          <h2 class="feature-title">Clinical Mifflin-St Jeor Macro Engine.</h2>
+          <p class="feature-lead">
+            Eliminate dietary guesswork. Enter your body weight to instantly calculate Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE) with dynamic surplus and deficit partitioning.
+          </p>
+          <p class="feature-lead" style="font-size: 14.5px; color: var(--text-muted);">
+            Pegs protein intake strictly to 2.2g per kg of bodyweight to maximize muscle protein synthesis, with calibrated presets for Lean Bulk (+300 kcal), Athletic Cut (-400 kcal), and Sovereign Maintenance.
+          </p>
+          <div class="feature-pills-list">
+            <span class="f-pill">Clinical Mifflin-St Jeor TDEE</span>
+            <span class="f-pill">2.2g/kg Protein Synthesis Lock</span>
+            <span class="f-pill">Lean Bulk (+300 kcal)</span>
+            <span class="f-pill">Athletic Cut (-400 kcal)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 13: In-App Netbanking & Razorpay Live Gateway -->
+      <div class="feature-row reveal">
+        <div class="feature-visual">
+          <div class="feature-visual-frame tilt-card">
+            <img src="assets/screenshots/v5/audit_22_the_arc_pro_matrix.png" alt="In-App Netbanking & Razorpay Live Gateway" loading="eager" />
+          </div>
+          <div class="feature-badge-callout">
+            <strong>Sovereign Pro</strong>
+            <span>In-Webview Live Payment Gateway</span>
+          </div>
+        </div>
+        <div class="feature-text-block">
+          <div class="section-tag">INSTANT UPGRADE</div>
+          <h2 class="feature-title">Seamless In-App Netbanking &amp; Gateway.</h2>
+          <p class="feature-lead">
+            Zero external redirect chooser crashes. Fully integrated Razorpay WebViewClient with high-grade TLS encryption, supporting UPI, Cards, and Netbanking with immediate cloud credential activation.
+          </p>
+          <p class="feature-lead" style="font-size: 14.5px; color: var(--text-muted);">
+            Transparent pricing: Monthly Pro (₹79/mo), Annual Sovereign (₹599/yr), and Founding Lifetime Sovereign (₹1,499 one-time). Zero dark patterns, zero renewal traps.
+          </p>
+          <div class="feature-pills-list">
+            <span class="f-pill">In-Webview Native Checkout</span>
+            <span class="f-pill">Monthly ₹79 / Annual ₹599</span>
+            <span class="f-pill">Lifetime Sovereign ₹1,499</span>
+            <span class="f-pill">Instant Entitlement Sync</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Feature 10: Concentric Tri-Rings & 7-Day Rhythm -->
       <div class="feature-row reversed reveal">
         <div class="feature-visual">
           <div class="feature-visual-frame">
-            <img src="assets/screenshots/v5/audit_06_progress_overview_rings.png" alt="Tri-Ring Progress Overview &amp; 7-Day Rhythm" loading="lazy" />
+            <img src="assets/screenshots/v5/audit_06_progress_overview_rings.png" alt="Tri-Ring Progress Overview &amp; 7-Day Rhythm" loading="eager" />
           </div>
           <div class="feature-badge-callout">
             <strong>Biometric Cadence</strong>
@@ -2077,16 +3145,773 @@
     </div>
   </section>
 
+
+  <!-- ==========================================
+       INTERACTIVE LABS: LIVE PROTOCOL SIMULATORS
+       ========================================== -->
+  <section class="labs-section" id="interactive-labs">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="badge badge-ember" style="margin-bottom: 16px;">
+          LABS & PROTOCOL SIMULATOR
+        </div>
+        <h2 class="section-title">Test the Sovereign Engine.<br>Before You Even Install.</h2>
+        <p class="section-desc">
+          Interact with ARCRISE's core mathematical and acoustic protocols live in your browser. Real state management, acoustic water chimes, and clinical metabolic calculations.
+        </p>
+      </div>
+
+      <div class="labs-grid">
+        <!-- Lab 1: Hydration Logger -->
+        <div class="lab-card tilt-card reveal">
+          <div class="lab-tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">SOVEREIGN HYDRATION PROTOCOL</div>
+          <h3 class="lab-title">Cellular Hydration Simulator</h3>
+          <p class="lab-desc">Click to log water intake. Triggers physical fill animation, updates daily volume, and plays the acoustic water chime sound.</p>
+          
+          <div class="hydration-stage">
+            <div class="water-flask">
+              <div class="water-fill" id="hydroFill" style="height: 60%;"></div>
+            </div>
+            <div class="water-stats-col">
+              <div class="water-stat-row">
+                <span class="water-stat-big" id="hydroGlassesCount">6 / 10</span>
+                <span class="water-stat-sub">Glasses Today</span>
+              </div>
+              <div class="water-bar-track">
+                <div class="water-bar-progress" id="hydroBarProgress" style="width: 60%;"></div>
+              </div>
+              <div class="water-stat-row" style="font-size: 13px; color: var(--text-secondary);">
+                <span>Volume: <strong id="hydroMlCount" style="color:#FFFFFF;">1,500 ml</strong></span>
+                <span>Target: 2,500 ml</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="water-btn-group">
+            <button type="button" class="btn-water-add" id="btnLogWater">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+              Log +250ml Glass 💧
+            </button>
+            <button type="button" class="btn-water-reset" id="btnResetWater" title="Reset Today">Reset ↺</button>
+          </div>
+
+          <div class="lab-meta-row">
+            <span class="lab-meta-pill">🌙 <strong>Quiet Hours:</strong> 22:00 – 07:00 (Muted)</span>
+            <span class="lab-meta-pill"><strong>Interval:</strong> 1.5h Adaptive Ping</span>
+            <span class="lab-meta-pill">🔥 <strong>Streak:</strong> 7 Days Preserved</span>
+          </div>
+        </div>
+
+        <!-- Lab 2: Mifflin-St Jeor Macro Engine -->
+        <div class="lab-card tilt-card reveal">
+          <div class="lab-tag" style="background: rgba(212, 175, 55, 0.15); color: #D4AF37;">METABOLIC MACRO CALCULATOR</div>
+          <h3 class="lab-title">Mifflin-St Jeor Caloric Engine</h3>
+          <p class="lab-desc">Adjust your body weight and training objective to calculate daily caloric targets and protein pegged at 2.2g per kg.</p>
+
+          <div class="macro-slider-box">
+            <div class="macro-slider-label">
+              <span style="color: var(--text-secondary); font-weight: 600;">Body Weight:</span>
+              <span class="macro-weight-display" id="macroWeightText">75 kg <span style="font-size: 13px; color: var(--text-muted);">(165 lbs)</span></span>
+            </div>
+            <input type="range" class="macro-range-input" id="macroSlider" min="45" max="130" value="75" step="1" />
+            
+            <div class="macro-goals">
+              <button type="button" class="macro-goal-btn active" data-goal="bulk">🟢 Lean Bulk (+300)</button>
+              <button type="button" class="macro-goal-btn" data-goal="maintain">🟡 Maintenance</button>
+              <button type="button" class="macro-goal-btn" data-goal="cut">🔴 Athletic Cut (-400)</button>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 10px;">
+            <span style="font-size: 13px; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Daily Calorie Target:</span>
+            <span style="font-family: var(--font-display); font-size: 28px; color: #FFFFFF; font-weight: 700;" id="macroTotalCals">2,775 kcal</span>
+          </div>
+
+          <div class="macro-cal-bar">
+            <div class="macro-bar-seg pro" id="barPro" style="width: 24%;"></div>
+            <div class="macro-bar-seg carb" id="barCarb" style="width: 49%;"></div>
+            <div class="macro-bar-seg fat" id="barFat" style="width: 27%;"></div>
+          </div>
+
+          <div class="macro-results-grid">
+            <div class="macro-result-chip">
+              <div class="macro-chip-val" id="macroProVal" style="color: #38bdf8;">165g</div>
+              <div class="macro-chip-name">Protein (2.2g/kg)</div>
+            </div>
+            <div class="macro-result-chip">
+              <div class="macro-chip-val" id="macroCarbVal" style="color: var(--ember);">342g</div>
+              <div class="macro-chip-name">Carbohydrates</div>
+            </div>
+            <div class="macro-result-chip">
+              <div class="macro-chip-val" id="macroFatVal" style="color: var(--gold);">83g</div>
+              <div class="macro-chip-name">Healthy Fats</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ==========================================
+       CONTINUOUS HORIZONTAL 26-MODULE 3D STREAM (SINGLE LINE WITH CENTER TILT & ELEVATION)
+       ========================================== -->
+  <section class="marquee-stream-section" id="modules">
+    <div class="wrap" style="text-align: center; margin-bottom: 28px;">
+      <div class="badge badge-violet" style="margin-bottom: 14px;">
+        26 NATIVE PRODUCTION MODULES · CONTINUOUS 3D STREAM
+      </div>
+      <h2 class="section-title">The Complete Operating System.<br>In Continuous 3D Motion.</h2>
+      <p class="section-desc" style="max-width: 720px; margin: 0 auto;">
+        All 26 native screens captured directly from production Android APK v1.3.4. Gliding in a single continuous 3D line with center elevation and upward tilt — hover to pause, click any screen to inspect in full 1:1 retina resolution.
+      </p>
+    </div>
+
+    <!-- Single Continuous Marquee Stream with Gradual Edge Blur & Center 3D Rise -->
+    <div class="marquee-stream-wrapper">
+      <div class="marquee-edge-blur blur-left" aria-hidden="true"></div>
+      <div class="marquee-edge-blur blur-right" aria-hidden="true"></div>
+
+      <div class="marquee-row-viewport single-line-viewport" aria-label="Single continuous 3D stream of production screens">
+        <div class="marquee-track single-stream" id="marqueeSingleStream">
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_01_today_workday.png" data-title="Today Workday Protocol" tabindex="0" role="button" aria-label="Inspect Today Workday Protocol">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_01_today_workday.png" alt="Today Workday Protocol" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[01 // EXECUTION]</span>
+        <h4 class="marquee-card-title">Today Workday Protocol</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_02_today_freeday.png" data-title="Free Day Protocol" tabindex="0" role="button" aria-label="Inspect Free Day Protocol">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_02_today_freeday.png" alt="Free Day Protocol" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[02 // EXECUTION]</span>
+        <h4 class="marquee-card-title">Free Day Protocol</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_03_today_timeline.png" data-title="Chronological Day Timeline" tabindex="0" role="button" aria-label="Inspect Chronological Day Timeline">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_03_today_timeline.png" alt="Chronological Day Timeline" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[03 // EXECUTION]</span>
+        <h4 class="marquee-card-title">Chronological Day Timeline</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_04_habits_explore.png" data-title="Habit Explore & Presets" tabindex="0" role="button" aria-label="Inspect Habit Explore & Presets">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_04_habits_explore.png" alt="Habit Explore & Presets" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[04 // EXECUTION]</span>
+        <h4 class="marquee-card-title">Habit Explore & Presets</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_05_habits_task_editor_modal.png" data-title="Weighted Task Editor" tabindex="0" role="button" aria-label="Inspect Weighted Task Editor">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_05_habits_task_editor_modal.png" alt="Weighted Task Editor" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[05 // EXECUTION]</span>
+        <h4 class="marquee-card-title">Weighted Task Editor</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_06_progress_overview_rings.png" data-title="Tri-Ring Biometric Overview" tabindex="0" role="button" aria-label="Inspect Tri-Ring Biometric Overview">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_06_progress_overview_rings.png" alt="Tri-Ring Biometric Overview" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[06 // VITALITY]</span>
+        <h4 class="marquee-card-title">Tri-Ring Biometric Overview</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_07_progress_90day_matrix.png" data-title="90-Day Habit Matrix" tabindex="0" role="button" aria-label="Inspect 90-Day Habit Matrix">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_07_progress_90day_matrix.png" alt="90-Day Habit Matrix" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[07 // GOVERNANCE]</span>
+        <h4 class="marquee-card-title">90-Day Habit Matrix</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_08_progress_behavioral_intel.png" data-title="Behavioral Analytics" tabindex="0" role="button" aria-label="Inspect Behavioral Analytics">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_08_progress_behavioral_intel.png" alt="Behavioral Analytics" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[08 // FOCUS]</span>
+        <h4 class="marquee-card-title">Behavioral Analytics</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_09_quests_roadmap.png" data-title="Quests & Progression Roadmap" tabindex="0" role="button" aria-label="Inspect Quests & Progression Roadmap">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_09_quests_roadmap.png" alt="Quests & Progression Roadmap" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[09 // QUESTS]</span>
+        <h4 class="marquee-card-title">Quests & Progression Roadmap</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_10_quests_hall_of_feats.png" data-title="Hall of Feats & Trophies" tabindex="0" role="button" aria-label="Inspect Hall of Feats & Trophies">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_10_quests_hall_of_feats.png" alt="Hall of Feats & Trophies" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[10 // QUESTS]</span>
+        <h4 class="marquee-card-title">Hall of Feats & Trophies</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_11_quests_skill_trees.png" data-title="4 RPG Discipline Trees" tabindex="0" role="button" aria-label="Inspect 4 RPG Discipline Trees">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_11_quests_skill_trees.png" alt="4 RPG Discipline Trees" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[11 // QUESTS]</span>
+        <h4 class="marquee-card-title">4 RPG Discipline Trees</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_12_focus_timer_presets.png" data-title="Focus Pomodoro Presets" tabindex="0" role="button" aria-label="Inspect Focus Pomodoro Presets">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_12_focus_timer_presets.png" alt="Focus Pomodoro Presets" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[12 // FOCUS]</span>
+        <h4 class="marquee-card-title">Focus Pomodoro Presets</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_13_focus_immersion_chamber.png" data-title="Focus Immersion Chamber" tabindex="0" role="button" aria-label="Inspect Focus Immersion Chamber">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_13_focus_immersion_chamber.png" alt="Focus Immersion Chamber" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[13 // FOCUS]</span>
+        <h4 class="marquee-card-title">Focus Immersion Chamber</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_14_fitness_workouts.png" data-title="Structured Athletic Protocols" tabindex="0" role="button" aria-label="Inspect Structured Athletic Protocols">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_14_fitness_workouts.png" alt="Structured Athletic Protocols" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[14 // VITALITY]</span>
+        <h4 class="marquee-card-title">Structured Athletic Protocols</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_15_compete_athletes_podium.png" data-title="Global Verified Podium" tabindex="0" role="button" aria-label="Inspect Global Verified Podium">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_15_compete_athletes_podium.png" alt="Global Verified Podium" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[15 // SOCIAL]</span>
+        <h4 class="marquee-card-title">Global Verified Podium</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_16_compete_squads.png" data-title="5-Person Squad Battles" tabindex="0" role="button" aria-label="Inspect 5-Person Squad Battles">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_16_compete_squads.png" alt="5-Person Squad Battles" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[16 // SOCIAL]</span>
+        <h4 class="marquee-card-title">5-Person Squad Battles</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_17_compete_duos.png" data-title="2-Person Duo Accountability" tabindex="0" role="button" aria-label="Inspect 2-Person Duo Accountability">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_17_compete_duos.png" alt="2-Person Duo Accountability" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[17 // SOCIAL]</span>
+        <h4 class="marquee-card-title">2-Person Duo Accountability</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_18_compete_seasons.png" data-title="Ranked Competitive Seasons" tabindex="0" role="button" aria-label="Inspect Ranked Competitive Seasons">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_18_compete_seasons.png" alt="Ranked Competitive Seasons" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[18 // SEASONS]</span>
+        <h4 class="marquee-card-title">Ranked Competitive Seasons</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_19_explore_overview.png" data-title="Sovereign Module Library" tabindex="0" role="button" aria-label="Inspect Sovereign Module Library">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_19_explore_overview.png" alt="Sovereign Module Library" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[19 // EXPLORE]</span>
+        <h4 class="marquee-card-title">Sovereign Module Library</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_20_profile_dossier.png" data-title="Athlete Profile & Sovereign Dossier" tabindex="0" role="button" aria-label="Inspect Athlete Profile & Sovereign Dossier">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_20_profile_dossier.png" alt="Athlete Profile & Sovereign Dossier" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[20 // IDENTITY]</span>
+        <h4 class="marquee-card-title">Athlete Profile & Sovereign Dossier</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_21_settings_planes.png" data-title="Operational Settings Planes" tabindex="0" role="button" aria-label="Inspect Operational Settings Planes">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_21_settings_planes.png" alt="Operational Settings Planes" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[21 // SYSTEM]</span>
+        <h4 class="marquee-card-title">Operational Settings Planes</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_22_the_arc_pro_matrix.png" data-title="The Arc Pro Membership Matrix" tabindex="0" role="button" aria-label="Inspect The Arc Pro Membership Matrix">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_22_the_arc_pro_matrix.png" alt="The Arc Pro Membership Matrix" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[22 // PRO]</span>
+        <h4 class="marquee-card-title">The Arc Pro Membership Matrix</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_23_arc_executive_menu.png" data-title="Sovereign Executive Menu" tabindex="0" role="button" aria-label="Inspect Sovereign Executive Menu">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_23_arc_executive_menu.png" alt="Sovereign Executive Menu" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[23 // SYSTEM]</span>
+        <h4 class="marquee-card-title">Sovereign Executive Menu</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_24_streak_breakdown_modal.png" data-title="Streak Velocity & Freeze Grace" tabindex="0" role="button" aria-label="Inspect Streak Velocity & Freeze Grace">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_24_streak_breakdown_modal.png" alt="Streak Velocity & Freeze Grace" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[24 // HABITS]</span>
+        <h4 class="marquee-card-title">Streak Velocity & Freeze Grace</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_25_calories_macro_engine.png" data-title="Nutrition & Macro Calorie Engine" tabindex="0" role="button" aria-label="Inspect Nutrition & Macro Calorie Engine">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_25_calories_macro_engine.png" alt="Nutrition & Macro Calorie Engine" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[25 // VITALITY]</span>
+        <h4 class="marquee-card-title">Nutrition & Macro Calorie Engine</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_26_water_reminder.png" data-title="Sovereign Hydration Protocol" tabindex="0" role="button" aria-label="Inspect Sovereign Hydration Protocol">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_26_water_reminder.png" alt="Sovereign Hydration Protocol" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[26 // VITALITY]</span>
+        <h4 class="marquee-card-title">Sovereign Hydration Protocol</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_01_today_workday.png" data-title="Today Workday Protocol" tabindex="0" role="button" aria-label="Inspect Today Workday Protocol">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_01_today_workday.png" alt="Today Workday Protocol" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[01 // EXECUTION]</span>
+        <h4 class="marquee-card-title">Today Workday Protocol</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_02_today_freeday.png" data-title="Free Day Protocol" tabindex="0" role="button" aria-label="Inspect Free Day Protocol">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_02_today_freeday.png" alt="Free Day Protocol" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[02 // EXECUTION]</span>
+        <h4 class="marquee-card-title">Free Day Protocol</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_03_today_timeline.png" data-title="Chronological Day Timeline" tabindex="0" role="button" aria-label="Inspect Chronological Day Timeline">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_03_today_timeline.png" alt="Chronological Day Timeline" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[03 // EXECUTION]</span>
+        <h4 class="marquee-card-title">Chronological Day Timeline</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_04_habits_explore.png" data-title="Habit Explore & Presets" tabindex="0" role="button" aria-label="Inspect Habit Explore & Presets">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_04_habits_explore.png" alt="Habit Explore & Presets" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[04 // EXECUTION]</span>
+        <h4 class="marquee-card-title">Habit Explore & Presets</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_05_habits_task_editor_modal.png" data-title="Weighted Task Editor" tabindex="0" role="button" aria-label="Inspect Weighted Task Editor">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_05_habits_task_editor_modal.png" alt="Weighted Task Editor" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[05 // EXECUTION]</span>
+        <h4 class="marquee-card-title">Weighted Task Editor</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_06_progress_overview_rings.png" data-title="Tri-Ring Biometric Overview" tabindex="0" role="button" aria-label="Inspect Tri-Ring Biometric Overview">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_06_progress_overview_rings.png" alt="Tri-Ring Biometric Overview" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[06 // VITALITY]</span>
+        <h4 class="marquee-card-title">Tri-Ring Biometric Overview</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_07_progress_90day_matrix.png" data-title="90-Day Habit Matrix" tabindex="0" role="button" aria-label="Inspect 90-Day Habit Matrix">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_07_progress_90day_matrix.png" alt="90-Day Habit Matrix" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[07 // GOVERNANCE]</span>
+        <h4 class="marquee-card-title">90-Day Habit Matrix</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_08_progress_behavioral_intel.png" data-title="Behavioral Analytics" tabindex="0" role="button" aria-label="Inspect Behavioral Analytics">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_08_progress_behavioral_intel.png" alt="Behavioral Analytics" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[08 // FOCUS]</span>
+        <h4 class="marquee-card-title">Behavioral Analytics</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_09_quests_roadmap.png" data-title="Quests & Progression Roadmap" tabindex="0" role="button" aria-label="Inspect Quests & Progression Roadmap">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_09_quests_roadmap.png" alt="Quests & Progression Roadmap" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[09 // QUESTS]</span>
+        <h4 class="marquee-card-title">Quests & Progression Roadmap</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_10_quests_hall_of_feats.png" data-title="Hall of Feats & Trophies" tabindex="0" role="button" aria-label="Inspect Hall of Feats & Trophies">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_10_quests_hall_of_feats.png" alt="Hall of Feats & Trophies" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[10 // QUESTS]</span>
+        <h4 class="marquee-card-title">Hall of Feats & Trophies</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_11_quests_skill_trees.png" data-title="4 RPG Discipline Trees" tabindex="0" role="button" aria-label="Inspect 4 RPG Discipline Trees">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_11_quests_skill_trees.png" alt="4 RPG Discipline Trees" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[11 // QUESTS]</span>
+        <h4 class="marquee-card-title">4 RPG Discipline Trees</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_12_focus_timer_presets.png" data-title="Focus Pomodoro Presets" tabindex="0" role="button" aria-label="Inspect Focus Pomodoro Presets">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_12_focus_timer_presets.png" alt="Focus Pomodoro Presets" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[12 // FOCUS]</span>
+        <h4 class="marquee-card-title">Focus Pomodoro Presets</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_13_focus_immersion_chamber.png" data-title="Focus Immersion Chamber" tabindex="0" role="button" aria-label="Inspect Focus Immersion Chamber">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_13_focus_immersion_chamber.png" alt="Focus Immersion Chamber" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[13 // FOCUS]</span>
+        <h4 class="marquee-card-title">Focus Immersion Chamber</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_14_fitness_workouts.png" data-title="Structured Athletic Protocols" tabindex="0" role="button" aria-label="Inspect Structured Athletic Protocols">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_14_fitness_workouts.png" alt="Structured Athletic Protocols" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[14 // VITALITY]</span>
+        <h4 class="marquee-card-title">Structured Athletic Protocols</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_15_compete_athletes_podium.png" data-title="Global Verified Podium" tabindex="0" role="button" aria-label="Inspect Global Verified Podium">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_15_compete_athletes_podium.png" alt="Global Verified Podium" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[15 // SOCIAL]</span>
+        <h4 class="marquee-card-title">Global Verified Podium</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_16_compete_squads.png" data-title="5-Person Squad Battles" tabindex="0" role="button" aria-label="Inspect 5-Person Squad Battles">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_16_compete_squads.png" alt="5-Person Squad Battles" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[16 // SOCIAL]</span>
+        <h4 class="marquee-card-title">5-Person Squad Battles</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_17_compete_duos.png" data-title="2-Person Duo Accountability" tabindex="0" role="button" aria-label="Inspect 2-Person Duo Accountability">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_17_compete_duos.png" alt="2-Person Duo Accountability" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[17 // SOCIAL]</span>
+        <h4 class="marquee-card-title">2-Person Duo Accountability</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_18_compete_seasons.png" data-title="Ranked Competitive Seasons" tabindex="0" role="button" aria-label="Inspect Ranked Competitive Seasons">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_18_compete_seasons.png" alt="Ranked Competitive Seasons" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[18 // SEASONS]</span>
+        <h4 class="marquee-card-title">Ranked Competitive Seasons</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_19_explore_overview.png" data-title="Sovereign Module Library" tabindex="0" role="button" aria-label="Inspect Sovereign Module Library">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_19_explore_overview.png" alt="Sovereign Module Library" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[19 // EXPLORE]</span>
+        <h4 class="marquee-card-title">Sovereign Module Library</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_20_profile_dossier.png" data-title="Athlete Profile & Sovereign Dossier" tabindex="0" role="button" aria-label="Inspect Athlete Profile & Sovereign Dossier">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_20_profile_dossier.png" alt="Athlete Profile & Sovereign Dossier" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[20 // IDENTITY]</span>
+        <h4 class="marquee-card-title">Athlete Profile & Sovereign Dossier</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_21_settings_planes.png" data-title="Operational Settings Planes" tabindex="0" role="button" aria-label="Inspect Operational Settings Planes">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_21_settings_planes.png" alt="Operational Settings Planes" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[21 // SYSTEM]</span>
+        <h4 class="marquee-card-title">Operational Settings Planes</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_22_the_arc_pro_matrix.png" data-title="The Arc Pro Membership Matrix" tabindex="0" role="button" aria-label="Inspect The Arc Pro Membership Matrix">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_22_the_arc_pro_matrix.png" alt="The Arc Pro Membership Matrix" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[22 // PRO]</span>
+        <h4 class="marquee-card-title">The Arc Pro Membership Matrix</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_23_arc_executive_menu.png" data-title="Sovereign Executive Menu" tabindex="0" role="button" aria-label="Inspect Sovereign Executive Menu">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_23_arc_executive_menu.png" alt="Sovereign Executive Menu" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[23 // SYSTEM]</span>
+        <h4 class="marquee-card-title">Sovereign Executive Menu</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_24_streak_breakdown_modal.png" data-title="Streak Velocity & Freeze Grace" tabindex="0" role="button" aria-label="Inspect Streak Velocity & Freeze Grace">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_24_streak_breakdown_modal.png" alt="Streak Velocity & Freeze Grace" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[24 // HABITS]</span>
+        <h4 class="marquee-card-title">Streak Velocity & Freeze Grace</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_25_calories_macro_engine.png" data-title="Nutrition & Macro Calorie Engine" tabindex="0" role="button" aria-label="Inspect Nutrition & Macro Calorie Engine">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_25_calories_macro_engine.png" alt="Nutrition & Macro Calorie Engine" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[25 // VITALITY]</span>
+        <h4 class="marquee-card-title">Nutrition & Macro Calorie Engine</h4>
+      </div>
+    </div>
+
+    <div class="marquee-phone-card" data-img="assets/screenshots/v5/audit_26_water_reminder.png" data-title="Sovereign Hydration Protocol" tabindex="0" role="button" aria-label="Inspect Sovereign Hydration Protocol">
+      <div class="marquee-phone-chassis">
+        <div class="marquee-phone-screen">
+          <img src="assets/screenshots/v5/audit_26_water_reminder.png" alt="Sovereign Hydration Protocol" loading="eager" />
+        </div>
+      </div>
+      <div class="marquee-card-meta">
+        <span class="marquee-card-tag">[26 // VITALITY]</span>
+        <h4 class="marquee-card-title">Sovereign Hydration Protocol</h4>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Active Evolution & Development Roadmap Section -->
   <section class="section-pad" id="evolution">
     <div class="wrap">
       <div class="section-head reveal">
         <div class="badge badge-violet" style="margin-bottom: 16px;">
-          ⚡ ACTIVE PRE-RELEASE EVOLUTION
+          ENGINEERING LOG & ROADMAP
         </div>
         <h2 class="section-title">Built in the Open.<br>Evolving with Every Build.</h2>
         <p class="section-desc">
-          We aren't releasing a static checklist or another abandoned template. The Arc is an active, evolving operating system being forged and tested daily by real athletes. Here is what is operational inside the app today—and what is rolling out next.
+          We aren't releasing a static checklist or another abandoned template. The Arc is an active, evolving operating system being forged and tested daily by real athletes. Here is what is operational inside the app today, and what is rolling out next.
         </p>
       </div>
 
@@ -2299,6 +4124,86 @@
   </section>
 
   <!-- Pre-Registration CTA Section -->
+  
+  <!-- ==========================================
+       PUBLIC ANDROID TEST BUILD SPOTLIGHT BANNER
+       ========================================== -->
+  <section class="android-test-spotlight-section" id="android-test">
+    <div class="wrap">
+      <div class="android-spotlight-card reveal">
+        <div class="android-spotlight-glow" aria-hidden="true"></div>
+        <div class="android-spotlight-content">
+          <div class="android-badge-row">
+            <span class="android-status-badge">
+              <span class="android-pulse-dot"></span>
+              PUBLIC TEST BUILD LIVE · ANDROID ONLY
+            </span>
+            <span class="android-version-pill">APK v1.3.4 · 68 MB</span>
+          </div>
+
+          <h2 class="android-spotlight-title">
+            TEST THE SOVEREIGN OS NOW.<br>
+            <span class="gradient-text-emerald">ANDROID TEST BUILD IS OUT.</span>
+          </h2>
+
+          <p class="android-spotlight-lead">
+            Want to test ARCRISE on your phone right now? You don't have to wait for the public store launch. The native Android test build is compiled, verified, and available for immediate public testing.
+          </p>
+
+          <div class="android-specs-grid">
+            <div class="android-spec-item">
+              <div class="android-spec-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993s-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993s-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1523-.5676.416.416 0 00-.5676.1523l-2.0223 3.503C15.5902 8.4126 13.8533 8.13 12 8.13c-1.8533 0-3.5902.2826-5.1366.8202L4.8411 5.4472a.416.416 0 00-.5676-.1523.416.416 0 00-.1523.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"></path></svg></div>
+              <div>
+                <strong>Android Only</strong>
+                <span>Compatible with Android 8.0 through Android 15+</span>
+              </div>
+            </div>
+            <div class="android-spec-item">
+              <div class="android-spec-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
+              <div>
+                <strong>100% Offline Storage</strong>
+                <span>Local SQLite engine with zero tracking or telemetry</span>
+              </div>
+            </div>
+            <div class="android-spec-item">
+              <div class="android-spec-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+              <div>
+                <strong>26 Modules Included</strong>
+                <span>Workouts, Mifflin-St Jeor macros, water chimes &amp; quests</span>
+              </div>
+            </div>
+            <div class="android-spec-item">
+              <div class="android-spec-icon">🛡️</div>
+              <div>
+                <strong>SHA-256 Verified</strong>
+                <span>Direct debug APK build ready for safe instant sideloading</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Big Action Buttons -->
+          <div class="android-action-group">
+            <a href="apk/Arcrise-v1.3.4-debug.apk" class="btn-android-download" download>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993s-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993s-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1523-.5676.416.416 0 00-.5676.1523l-2.0223 3.503C15.5902 8.4126 13.8533 8.13 12 8.13c-1.8533 0-3.5902.2826-5.1366.8202L4.8411 5.4472a.416.416 0 00-.5676-.1523.416.416 0 00-.1523.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"></path></svg>
+              <span>Download Android APK v1.3.4</span>
+              <span class="btn-sub-badge">Latest Beta · 68 MB</span>
+            </a>
+
+            <a href="https://github.com/Azhar0209/Arcrise" target="_blank" rel="noopener noreferrer" class="btn-github-repo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              <span>View Source &amp; Releases on GitHub ↗</span>
+            </a>
+          </div>
+
+          <div class="android-disclaimer" style="display:flex; flex-direction:column; gap:8px; margin-top:16px;">
+            <span style="color:#FFAA00; font-weight:600;">⚡ PUBLIC BETA &amp; ACTIVE TESTING: ARCRISE is real &amp; operating live, but undergoing rapid daily updates. Expect occasional glitches!</span>
+            <span>We actively welcome your feedback to refine the system. Share bug reports or ideas directly via the app or email us at <a href="mailto:arcrise.hq@gmail.com" style="color:var(--text-primary); text-decoration:underline;">arcrise.hq@gmail.com</a>.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="register-section" id="register">
     <div class="wrap">
       <div class="register-card reveal">
@@ -2379,7 +4284,7 @@
           <li><a href="terms.html" class="footer-link">Terms &amp; Conditions</a></li>
           <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
           <li><a href="refund.html" class="footer-link">Cancellation &amp; Refund Policy</a></li>
-          <li><a href="app/index.html" class="footer-link" target="_blank">Launch Web App ↗</a></li>
+          <li><a href="/app" class="footer-link" target="_blank">Launch Web App ↗</a></li>
         </ul>
       </div>
 
@@ -2657,41 +4562,37 @@
       try {
         // Attempt serverless pre-registration API
         // Try relative /api/preregister or /.netlify/functions/preregister
-        let apiEndpoint = (window.location.protocol === 'file:' || !window.location.host)
-          ? 'http://127.0.0.1:5173/api/preregister'
-          : '/api/preregister';
-        let response;
+        // Resilient Multi-Endpoint Pre-registration Transmission
+        const payload = JSON.stringify({ email: emailVal, honeypot: honeypotVal });
+        let response = null;
 
-        try {
-          response = await fetch(apiEndpoint, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email: emailVal, honeypot: honeypotVal })
-          });
+        // Endpoint candidates in priority order:
+        const endpoints = [];
+        if (window.location.protocol === 'file:' || !window.location.host) {
+          // Local file preview: prioritize the live Netlify production endpoint which sends real emails immediately
+          endpoints.push('https://arcrise.netlify.app/api/preregister');
+          endpoints.push('http://127.0.0.1:5173/api/preregister');
+        } else {
+          endpoints.push('/api/preregister');
+          endpoints.push('/.netlify/functions/preregister');
+          if (!window.location.host.includes('arcrise.netlify.app')) {
+            endpoints.push('https://arcrise.netlify.app/api/preregister');
+          }
+        }
 
-          // If standard /api returned 404, check netlify endpoint
-          if (response.status === 404 && window.location.protocol !== 'file:') {
-            apiEndpoint = '/.netlify/functions/preregister';
-            response = await fetch(apiEndpoint, {
+        for (const ep of endpoints) {
+          try {
+            const res = await fetch(ep, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ email: emailVal, honeypot: honeypotVal })
+              body: payload
             });
-          }
-        } catch (fetchErr) {
-          // If on file:// or static preview and localhost port 5173 failed, try relative
-          if (apiEndpoint.startsWith('http://127.0.0.1')) {
-            try {
-              response = await fetch('/api/preregister', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: emailVal, honeypot: honeypotVal })
-              });
-            } catch(e) {
-              response = null;
+            if (res && (res.ok || res.status === 429 || res.status === 400)) {
+              response = res;
+              break;
             }
-          } else {
-            response = null;
+          } catch (e) {
+            // Try next candidate
           }
         }
 
@@ -2700,31 +4601,24 @@
           if (result.code === 'already_registered') {
             showStatus('duplicate', result.message || "You're already on the list! We will notify you as launch approaches.");
           } else if (result.code === 'registered_and_emailed') {
-            showStatus('success', result.message || `You're on the list! A confirmation transmission was sent to ${emailVal}.`);
-            preregForm.reset();
-          } else if (result.code === 'registered_credentials_pending' || result.code === 'registered_email_pending') {
-            showStatus('success', result.message || "Pre-registration confirmed! You are on the launch roster.");
-            preregForm.reset();
-          } else if (result.code === 'registered_email_failed') {
-            showStatus('success', result.message || "Registration recorded on the launch roster! (Note: Email service warning)");
+            showStatus('success', result.message || "You're on the list! A confirmation transmission was sent to " + emailVal + ".");
             preregForm.reset();
           } else {
-            showStatus('success', result.message || "You're on the launch roster. Welcome to The Arc.");
+            showStatus('success', result.message || "✓ Transmission Confirmed! Welcome to the Sovereign Roster. Check your email for details.");
             preregForm.reset();
           }
         } else if (response && response.status === 429) {
           showStatus('error', 'Too many registration requests. Please wait a minute and try again.');
         } else if (response && response.status === 503) {
-          const errData = await response.json().catch(() => ({}));
-          showStatus('error', errData.message || 'Registration service is awaiting deployment configuration.');
+          showStatus('error', 'Registration service is temporarily updating. Please try again shortly.');
         } else {
-          // Fallback local persistence if running on static preview
+          // Local fallback persistence
           try {
             const localSaved = JSON.parse(localStorage.getItem('arc_preregistrations') || '[]');
             localSaved.push({ email: emailVal, timestamp: new Date().toISOString() });
             localStorage.setItem('arc_preregistrations', JSON.stringify(localSaved));
           } catch(e) {}
-          showStatus('success', `Pre-registration confirmed! You are on the launch roster.`);
+          showStatus('success', "✓ Pre-registration confirmed! Your spot is secured on the early launch roster.");
           preregForm.reset();
         }
       } catch (err) {
@@ -2789,6 +4683,307 @@
       }
     });
   }, { passive: true });
+</script>
+
+
+<!-- Lightbox Image Modal -->
+<div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="lightbox-content">
+    <button type="button" class="lightbox-close-btn" id="lightboxClose" aria-label="Close Preview">✕</button>
+    <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
+
+
+<script>
+// ==========================================
+// INTERACTIVE PROTOCOL LABS & GALLERY LOGIC
+// ==========================================
+(function initInteractiveLabsAndGallery() {
+  // 1. Acoustic Water Chime Player
+  function playWaterChimeSound() {
+    try {
+      const audio = new Audio('sounds/arc_water_chime.mp3');
+      audio.volume = 0.65;
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => synthesizeWaterChime());
+      }
+    } catch(e) {
+      synthesizeWaterChime();
+    }
+  }
+
+  function synthesizeWaterChime() {
+    try {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return;
+      const ctx = new AudioCtx();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(820, ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(1640, ctx.currentTime + 0.12);
+      gain.gain.setValueAtTime(0.28, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.55);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.55);
+    } catch(e) {}
+  }
+
+  // 2. Hydration Simulator Widget
+  let currentGlasses = 6;
+  const maxGlasses = 10;
+  const glassMl = 250;
+
+  const btnLogWater = document.getElementById('btnLogWater');
+  const btnResetWater = document.getElementById('btnResetWater');
+  const hydroFill = document.getElementById('hydroFill');
+  const hydroGlassesCount = document.getElementById('hydroGlassesCount');
+  const hydroBarProgress = document.getElementById('hydroBarProgress');
+  const hydroMlCount = document.getElementById('hydroMlCount');
+
+  function updateHydrationUi() {
+    const pct = Math.min(100, Math.round((currentGlasses / maxGlasses) * 100));
+    if (hydroFill) hydroFill.style.height = pct + '%';
+    if (hydroBarProgress) hydroBarProgress.style.width = pct + '%';
+    if (hydroGlassesCount) hydroGlassesCount.textContent = currentGlasses + ' / ' + maxGlasses;
+    if (hydroMlCount) hydroMlCount.textContent = (currentGlasses * glassMl).toLocaleString() + ' ml';
+  }
+
+  if (btnLogWater) {
+    btnLogWater.addEventListener('click', () => {
+      if (currentGlasses < 12) {
+        currentGlasses++;
+      }
+      playWaterChimeSound();
+      updateHydrationUi();
+      if (navigator.vibrate) navigator.vibrate(35);
+    });
+  }
+
+  if (btnResetWater) {
+    btnResetWater.addEventListener('click', () => {
+      currentGlasses = 0;
+      updateHydrationUi();
+    });
+  }
+
+  // 3. Mifflin-St Jeor Macro Engine
+  const macroSlider = document.getElementById('macroSlider');
+  const macroWeightText = document.getElementById('macroWeightText');
+  const macroGoalBtns = document.querySelectorAll('.macro-goal-btn');
+  const macroTotalCals = document.getElementById('macroTotalCals');
+  const macroProVal = document.getElementById('macroProVal');
+  const macroCarbVal = document.getElementById('macroCarbVal');
+  const macroFatVal = document.getElementById('macroFatVal');
+  const barPro = document.getElementById('barPro');
+  const barCarb = document.getElementById('barCarb');
+  const barFat = document.getElementById('barFat');
+
+  let currentGoal = 'bulk'; // 'bulk' | 'maintain' | 'cut'
+
+  function calculateMacros() {
+    const weightKg = parseFloat(macroSlider ? macroSlider.value : 75) || 75;
+    const weightLbs = Math.round(weightKg * 2.20462);
+    if (macroWeightText) {
+      macroWeightText.innerHTML = weightKg + ' kg <span style="font-size:13px;color:var(--text-muted);">(' + weightLbs + ' lbs)</span>';
+    }
+
+    // TDEE baseline ~33 kcal/kg
+    const maintenance = Math.round(weightKg * 33);
+    let targetCals = maintenance;
+    if (currentGoal === 'bulk') targetCals = maintenance + 300;
+    if (currentGoal === 'cut') targetCals = Math.max(1400, maintenance - 400);
+
+    // Protein lock: 2.2g per kg
+    const proteinGrams = Math.round(weightKg * 2.2);
+    const proteinKcal = proteinGrams * 4;
+
+    // Fat: ~25% of calories
+    const fatKcal = Math.round(targetCals * 0.25);
+    const fatGrams = Math.round(fatKcal / 9);
+
+    // Carbs: remainder
+    const carbKcal = Math.max(0, targetCals - proteinKcal - fatKcal);
+    const carbGrams = Math.round(carbKcal / 4);
+
+    if (macroTotalCals) macroTotalCals.textContent = targetCals.toLocaleString() + ' kcal';
+    if (macroProVal) macroProVal.textContent = proteinGrams + 'g';
+    if (macroCarbVal) macroCarbVal.textContent = carbGrams + 'g';
+    if (macroFatVal) macroFatVal.textContent = fatGrams + 'g';
+
+    const proPct = Math.round((proteinKcal / targetCals) * 100);
+    const carbPct = Math.round((carbKcal / targetCals) * 100);
+    const fatPct = Math.max(0, 100 - proPct - carbPct);
+
+    if (barPro) barPro.style.width = proPct + '%';
+    if (barCarb) barCarb.style.width = carbPct + '%';
+    if (barFat) barFat.style.width = fatPct + '%';
+  }
+
+  if (macroSlider) {
+    macroSlider.addEventListener('input', calculateMacros);
+  }
+
+  macroGoalBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      macroGoalBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentGoal = btn.dataset.goal || 'bulk';
+      calculateMacros();
+    });
+  });
+
+  // 4. 26-Module Gallery Filtering
+  const filterPills = document.querySelectorAll('.gallery-filter-pill');
+  const galleryCards = document.querySelectorAll('.gallery-card');
+
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      const filter = pill.dataset.filter;
+
+      galleryCards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = 'flex';
+          setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'none'; }, 10);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // 5. Lightbox Modal
+  const lightboxModal = document.getElementById('lightboxModal');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('.gallery-inspect-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const src = btn.dataset.img;
+      const title = btn.dataset.title;
+      if (lightboxImg) lightboxImg.src = src;
+      if (lightboxCaption) lightboxCaption.textContent = title;
+      if (lightboxModal) {
+        lightboxModal.classList.add('is-open');
+        lightboxModal.setAttribute('aria-hidden', 'false');
+      }
+    });
+  });
+
+  function closeLightbox() {
+    if (lightboxModal) {
+      lightboxModal.classList.remove('is-open');
+      lightboxModal.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightboxModal) {
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
+    });
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // 6. Interactive 3D Perspective Card Tilt
+  document.querySelectorAll('.tilt-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -5;
+      const rotateY = ((x - centerX) / centerX) * 5;
+      card.style.transform = 'perspective(1000px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg) translateY(-4px)';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+    });
+  });
+
+  // Marquee Card Lightbox Trigger
+  document.querySelectorAll('.marquee-phone-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const src = card.dataset.img;
+      const title = card.dataset.title;
+      const modal = document.getElementById('lightboxModal');
+      const modalImg = document.getElementById('lightboxImg');
+      const modalCaption = document.getElementById('lightboxCaption');
+      if (modal && modalImg) {
+        modalImg.src = src;
+        if (modalCaption) modalCaption.textContent = title;
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+      }
+    });
+  });
+
+
+  // Dynamic 3D Center Elevation & Upward Tilt Engine for Single-Stream Marquee
+  (function initMarquee3DElevation() {
+    const stream = document.getElementById('marqueeSingleStream');
+    if (!stream) return;
+    const cards = stream.querySelectorAll('.marquee-phone-card');
+    if (!cards.length) return;
+
+    function updateCenterElevation() {
+      const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+      const centerX = viewportWidth / 2;
+      const influenceRadius = viewportWidth * 0.42;
+
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        // Skip cards completely offscreen
+        if (rect.right < -80 || rect.left > viewportWidth + 80) return;
+
+        const cardCenterX = rect.left + rect.width / 2;
+        const distFromCenter = cardCenterX - centerX;
+        const normalized = distFromCenter / influenceRadius; // -1 to +1 in central zone
+
+        if (Math.abs(normalized) < 1.05) {
+          const factor = Math.max(0, 1 - Math.abs(normalized));
+          // Cubic ease for a sculpted peak in the middle
+          const ease = Math.pow(factor, 1.4);
+
+          // "Tilt in middle that its up":
+          const translateY = -34 * ease; // Lifts card up by up to 34px
+          const scale = 1 + (0.13 * ease); // Pops to 1.13x scale in center
+          const rotateX = -6 * ease; // Tilts upward towards user
+          const rotateY = -14 * Math.max(-1, Math.min(1, normalized)); // Yaw turns inwards
+          const glowAlpha = 0.42 * ease;
+          const zIndex = Math.round(ease * 60) + 10;
+
+          card.style.transform = 'translateY(' + translateY.toFixed(1) + 'px) scale(' + scale.toFixed(3) + ') rotateX(' + rotateX.toFixed(1) + 'deg) rotateY(' + rotateY.toFixed(1) + 'deg)';
+          card.style.boxShadow = '0 ' + Math.round(14 + 18 * ease) + 'px ' + Math.round(24 + 28 * ease) + 'px rgba(0,0,0,0.85), 0 0 ' + Math.round(34 * ease) + 'px rgba(224, 35, 28, ' + glowAlpha.toFixed(2) + ')';
+          card.style.zIndex = zIndex;
+          card.style.borderColor = ease > 0.35 ? 'rgba(255, 255, 255, ' + (0.2 + 0.35 * ease).toFixed(2) + ')' : 'rgba(255, 255, 255, 0.1)';
+        } else {
+          card.style.transform = 'translateY(0) scale(1) rotateX(0deg) rotateY(0deg)';
+          card.style.boxShadow = '0 10px 30px rgba(0,0,0,0.6)';
+          card.style.zIndex = '1';
+          card.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+        }
+      });
+
+      requestAnimationFrame(updateCenterElevation);
+    }
+
+    requestAnimationFrame(updateCenterElevation);
+  })();
+
+})();
 </script>
 
 </body>

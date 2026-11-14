@@ -1,6 +1,8 @@
 # ⚡ ARCRISE — Sovereign Athletic Discipline & Habit OS
 
-[![Android](https://img.shields.io/badge/Platform-Android%208.0%2B-brightgreen.svg?style=flat-square)](file:///Users/azhar/Desktop/Arcrise-debug.apk)
+[![Android](https://img.shields.io/badge/Platform-Android%208.0%2B-brightgreen.svg?style=flat-square)](apk/Arcrise-v1.3.4-debug.apk)
+[![Status](https://img.shields.io/badge/Status-Public%20Beta%20%E2%80%A2%20Active%20Testing-orange.svg?style=flat-square)](#-public-beta--active-testing-notice)
+[![Feedback](https://img.shields.io/badge/Feedback-Direct%20Channels%20Open-blue.svg?style=flat-square)](#-how-to-share-feedback--report-bugs)
 [![React](https://img.shields.io/badge/React-18-blue.svg?style=flat-square)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-5-purple.svg?style=flat-square)](https://vitejs.dev)
 [![Capacitor](https://img.shields.io/badge/Capacitor-6-cyan.svg?style=flat-square)](https://capacitorjs.com)
@@ -12,13 +14,32 @@
 
 ---
 
+## ⚠️ PUBLIC BETA & ACTIVE TESTING NOTICE
+
+> ### 📢 YES, ARCRISE IS 100% REAL & OPERATIONAL — BUT CURRENTLY UNDER ACTIVE TESTING!
+>
+> **ARCRISE is a real, live, fully-functional athletic discipline & habit operating system.** It is not a mockup, concept, or prototype. The habit engine, workout routines, Mifflin-St Jeor macro calculator, focus soundscapes, and live athlete leaderboards are all live and executing daily.
+>
+> However, **the platform is currently in PUBLIC BETA (Active Testing & Rapid Refinement Phase).**
+> - 🛠️ **Expect Occasional Bugs & Glitches:** We are pushing frequent updates, refining animations, and hardening device compatibility across hundreds of Android screen sizes and chipsets. You may occasionally run into visual imperfections, UI glitches, or transient errors.
+> - 🔄 **Continuous Improvement:** We are actively monitoring performance, upgrading physics engines (such as our dynamic quotes deck and 3D lanyard), and polishing user flows in real time.
+> - 💬 **We Need Your Feedback:** Your voice directly decides what gets built, polished, and fixed next. If something feels off, if you spot a bug, or if you have an idea for a killer feature, tell us immediately!
+
+### 📬 How to Share Feedback & Report Bugs
+1. **In-App Direct Feedback Screen**: Tap your Profile photo in the app → scroll to **"Send Feedback / Report Issue"** → enter your thoughts and submit instantly.
+2. **Direct Founder / HQ Email**: Email us directly at [**`arcrise.hq@gmail.com`**](mailto:arcrise.hq@gmail.com) with screenshots, screen recordings, or details.
+3. **GitHub Issues**: Open a new issue right here in this repository under the [**Issues Tab**](https://github.com/Azhar0209/Arcrise/issues).
+
+---
+
 ## 📥 Download ARCRISE Android App
 
 The official compiled Android Application Packages are organized in the [`apk/`](apk/) directory:
 
 | Version | Status | Download Link | Key Changes |
 | :--- | :--- | :--- | :--- |
-| **`v1.3.3`** | **Latest (Recommended)** | [**Download Arcrise-v1.3.3-debug.apk**](apk/Arcrise-v1.3.3-debug.apk) | Sovereign Founder Gifting Suite, VIP Whitelist engine, WhatsApp 1-tap code sharing, and Gift Code redemption |
+| **`v1.3.4`** | **🔥 Latest (Recommended)** | [**Download Arcrise-v1.3.4-debug.apk**](apk/Arcrise-v1.3.4-debug.apk) | Full-screen animated Sovereign Error Page (zero popup alerts), Global Error Boundary, silky-smooth opening animation, dynamic quotes card depth physics & velocity flick gestures |
+| **`v1.3.3`** | Stable | [Arcrise-v1.3.3-debug.apk](apk/Arcrise-v1.3.3-debug.apk) | Sovereign Founder Gifting Suite, VIP Whitelist engine, WhatsApp 1-tap code sharing, and Gift Code redemption |
 | **`v1.3.2`** | Stable | [Arcrise-v1.3.2-debug.apk](apk/Arcrise-v1.3.2-debug.apk) | 3D Card photo customizer with size & alignment sliders, 24K gold strap, automatic Lifetime Pro for Founder |
 | **`v1.3.1`** | Stable | [Arcrise-v1.3.1-debug.apk](apk/Arcrise-v1.3.1-debug.apk) | Netbanking in-app modal dialog, crash resolution, subscription availability timeline |
 | **`v1.3.0`** | Archived | [`apk/README.md`](apk/README.md#version-history--changelog) | Water Reminder protocol with quiet hours, Netbanking fix, clean dashboard |

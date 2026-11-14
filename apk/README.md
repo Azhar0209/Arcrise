@@ -4,11 +4,11 @@ Official distribution channel for ARCRISE Android Application Packages (`.apk`).
 
 ---
 
-## 🚀 Current Release: `v1.3.3` (Recommended)
+## 🚀 Current Release: `v1.3.4` (Recommended)
 
 | Property | Value |
 | :--- | :--- |
-| **Filename** | `Arcrise-v1.3.3-debug.apk` |
+| **Filename** | `Arcrise-v1.3.4-debug.apk` |
 | **Package ID** | `com.thearc.app` |
 | **Target OS** | Android 8.0+ (API 26+) up to Android 14 (API 34) |
 | **Build Type** | Debug / Sideload Verified |
@@ -20,7 +20,28 @@ Official distribution channel for ARCRISE Android Application Packages (`.apk`).
 
 ## 📋 Version History & Changelog
 
-### **v1.3.3 — Sovereign Founder Gifting Suite & VIP Whitelist Engine** *(Latest)*
+### **v1.3.4 — Animated Sovereign Error Page, Global Error Boundary & Silky Quotes Physics** *(Latest)*
+- **Full-Screen Animated Sovereign Error Screen (Zero Popups)**:
+  - Eliminated all clunky recovery popups, raw banners, and standard modal error dialogs.
+  - Built full-screen, OLED black animated recovery page featuring an orbital shield radar graphic, luminous cyan glow, copyable diagnostic stack trace button with tactile feedback, and dual recovery actions: **"Re-engage Protocol"** and **"Return to Dashboard"**.
+  - Integrated `GlobalErrorBoundary` across the React root component tree to catch uncaught render crashes gracefully.
+- **Silky-Smooth Opening Splash Screen**:
+  - Replaced abrupt 20x zoom and stark white flashes with Apple-grade spring physics (`cubic-bezier(0.16, 1, 0.3, 1)`).
+  - High-res frosted glass emblem capsule with radiant glow, tracked luxury wordmark, and micro-hairline progress glide.
+- **Buttery-Smooth Quotes Card Deck & Inspiration Physics**:
+  - Rebuilt quotes card swipe engine with real-time multi-card dynamic depth stack physics. Dragging the top card dynamically un-tilts the middle card and brings the deep card forward proportionally to touch displacement.
+  - Added velocity flick detection (`vx > 0.36 px/ms` and `t < 280ms`) for effortless one-handed flick gestures.
+  - Eliminated CSS keyframe jitter during pointer drag interactions.
+- **Expiring Single-Use Gift Codes (48–72h Lifecycle)**:
+  - Added cryptographic expiry window options (24h, 48h, 72h, or Permanent).
+  - One-time redemption enforcement: codes self-destruct once redeemed by an athlete.
+- **Universal Profile Picture Visibility & 3D Card Lanyard Hardening**:
+  - Full-resolution photo synchronization across all athlete profiles, squad feeds, and community leaderboards.
+  - WebGL context loss protection and graceful 2D tactile badge fallback for older Android devices.
+
+---
+
+### **v1.3.3 — Sovereign Founder Gifting Suite & VIP Whitelist Engine**
 - **Founder Sovereign Gifting Console**:
   - Accessible exclusively to Mohammad Azhar (`02md.azhar@gmail.com` / `ARC-A5YT`) directly inside the Profile and Pro screen.
   - **Master VIP Quick Codes**: Permanent, instant codes (`AZHAR-VIP`, `SOVEREIGN-LIFETIME`, `ARC-FOUNDER-PRO`) with 1-tap **Copy Code** and **Share via WhatsApp** pre-formatted messages.
