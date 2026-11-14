@@ -4,11 +4,11 @@ Official distribution channel for ARCRISE Android Application Packages (`.apk`).
 
 ---
 
-## 🚀 Current Release: `v1.3.2` (Recommended)
+## 🚀 Current Release: `v1.3.3` (Recommended)
 
 | Property | Value |
 | :--- | :--- |
-| **Filename** | `Arcrise-v1.3.2-debug.apk` |
+| **Filename** | `Arcrise-v1.3.3-debug.apk` |
 | **Package ID** | `com.thearc.app` |
 | **Target OS** | Android 8.0+ (API 26+) up to Android 14 (API 34) |
 | **Build Type** | Debug / Sideload Verified |
@@ -20,7 +20,20 @@ Official distribution channel for ARCRISE Android Application Packages (`.apk`).
 
 ## 📋 Version History & Changelog
 
-### **v1.3.2 — 3D Card Photo Customizer & Sovereign Founder Permanent Free Pro** *(Latest)*
+### **v1.3.3 — Sovereign Founder Gifting Suite & VIP Whitelist Engine** *(Latest)*
+- **Founder Sovereign Gifting Console**:
+  - Accessible exclusively to Mohammad Azhar (`02md.azhar@gmail.com` / `ARC-A5YT`) directly inside the Profile and Pro screen.
+  - **Master VIP Quick Codes**: Permanent, instant codes (`AZHAR-VIP`, `SOVEREIGN-LIFETIME`, `ARC-FOUNDER-PRO`) with 1-tap **Copy Code** and **Share via WhatsApp** pre-formatted messages.
+  - **Dynamic Gift Code Generator**: On-demand generator creating verified codes (`AZHAR-XXXX`) for Lifetime, Annual (365d), or Monthly (30d) Pro access with recipient tracking notes.
+  - **VIP Whitelist Management**: Directly whitelist any athlete's Email or Athlete ID (`ARC-XXXX`) to grant them instant **Lifetime Sovereign Pro** without requiring any code entry.
+- **Sovereign Gift Redemption Engine**:
+  - Embedded **"🎟️ Have a Founder Gift Code?"** entry card on the Pro paywall screen for non-Pro users.
+  - Instant cryptographic and offline validation with celebratory unlock animation: *"👑 Sovereign Pro Granted — Gifted by Founder Mohammad Azhar"*.
+  - Automatically unlocks the complete Pro suite (Water Reminders, Advanced Progress Matrix, Feats Engine, and Deep Work Analytics).
+
+---
+
+### **v1.3.2 — 3D Card Photo Customizer & Sovereign Founder Permanent Free Pro**
 - **Interactive 3D Card Photo & Alignment Engine**:
   - Replaced static initials (`MA`) on the 3D Card with the athlete's real high-resolution photograph.
   - Added an interactive **"Adjust Card Photo (Size & Alignment)"** control panel inside the 3D Card Modal.

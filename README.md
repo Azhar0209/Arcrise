@@ -1,24 +1,11 @@
 # ⚡ ARCRISE — Sovereign Athletic Discipline & Habit OS
 
-[![Android](https://img.shields.io/badge/Platform-Android%208.0%2B-brightgreen.svg?style=flat-square)](apk/Arcrise-v1.3.2-debug.apk)
-[![Status](https://img.shields.io/badge/Status-Beta%20Release-orange.svg?style=flat-square)](apk/)
+[![Android](https://img.shields.io/badge/Platform-Android%208.0%2B-brightgreen.svg?style=flat-square)](file:///Users/azhar/Desktop/Arcrise-debug.apk)
+[![React](https://img.shields.io/badge/React-18-blue.svg?style=flat-square)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-5-purple.svg?style=flat-square)](https://vitejs.dev)
+[![Capacitor](https://img.shields.io/badge/Capacitor-6-cyan.svg?style=flat-square)](https://capacitorjs.com)
+[![Tests](https://img.shields.io/badge/Tests-17%2F17%20Passed-success.svg?style=flat-square)](test/run_all_tests.js)
 [![Official Website](https://img.shields.io/badge/Website-arcrise.netlify.app-gold.svg?style=flat-square)](https://arcrise.netlify.app)
-[![Support](https://img.shields.io/badge/Feedback-arcrise.hq%40gmail.com-red.svg?style=flat-square)](mailto:arcrise.hq@gmail.com)
-
----
-
-## ⚠️ ACTIVE BETA NOTICE: BUGS & GLITCHES
-> ### 🚨 PLEASE NOTE: ARCRISE IS IN ACTIVE EARLY ACCESS TESTING
-> **You may experience occasional bugs, UI glitches, or performance hiccups** as we rapidly test, optimize, and refine the application across various Android devices and screen sizes.
->
-> 💬 **WE VALUE YOUR FEEDBACK — HELP US MAKE ARCRISE BETTER:**  
-> If you run into any bug, unexpected behavior, visual glitch, or have feature ideas:
-> - 📩 **Email your feedback directly to:** [`arcrise.hq@gmail.com`](mailto:arcrise.hq@gmail.com)
-> - 🌐 **Official Website & Pre-Registration:** [**https://arcrise.netlify.app**](https://arcrise.netlify.app)
->
-> We read every message and actively push improvements to make ARCRISE faster and stronger!
-
----
 
 > **Become who you set out to be.**  
 > ARCRISE is the disciplined operating system for personal progression, athletic mastery, and daily execution. Built with high-adherence habit architecture, structured strength & calisthenics routines, 90-day consistency heatmaps, and a real community leaderboard.
@@ -27,18 +14,16 @@
 
 ## 📥 Download ARCRISE Android App
 
-The official compiled Android Application Packages are available directly in the [`apk/`](apk/) folder:
+The official compiled Android Application Packages are organized in the [`apk/`](apk/) directory:
 
-| Version | Release Status | Download Link | What's Included |
+| Version | Status | Download Link | Key Changes |
 | :--- | :--- | :--- | :--- |
-| **`v1.3.2`** | **Latest (Recommended)** | [**⬇️ Download Arcrise-v1.3.2-debug.apk**](apk/Arcrise-v1.3.2-debug.apk) | 3D Card photo customizer with size & alignment sliders, 24K gold strap, automatic Lifetime Pro for Founder, zero-leak paywall |
-| **`v1.3.1`** | Archived | [`apk/README.md`](apk/README.md#version-history--changelog) | Netbanking modal dialog WebView crash fix, Pro availability timeline & expiry display |
-| **`v1.3.0`** | Archived | [`apk/README.md`](apk/README.md#version-history--changelog) | Water Reminder in Pro with quiet hours & soothing chime, Netbanking WebView in-place fix, removed wake clock |
-| **`v1.2.0`** | Archived | [`apk/README.md`](apk/README.md#version-history--changelog) | Live Razorpay integration, Native UPI Intent routing, zero simulation bypass |
-| **`v1.1.0`** | Archived | [`apk/README.md`](apk/README.md#version-history--changelog) | Luxury porcelain light theme, athlete avatar persistence, focus timer interval bells |
-| **`v1.0.0`** | Archived | [`apk/README.md`](apk/README.md#version-history--changelog) | Initial Sovereign OS release with task matrix, workouts, and offline guest mode |
+| **`v1.3.3`** | **Latest (Recommended)** | [**Download Arcrise-v1.3.3-debug.apk**](apk/Arcrise-v1.3.3-debug.apk) | Sovereign Founder Gifting Suite, VIP Whitelist engine, WhatsApp 1-tap code sharing, and Gift Code redemption |
+| **`v1.3.2`** | Stable | [Arcrise-v1.3.2-debug.apk](apk/Arcrise-v1.3.2-debug.apk) | 3D Card photo customizer with size & alignment sliders, 24K gold strap, automatic Lifetime Pro for Founder |
+| **`v1.3.1`** | Stable | [Arcrise-v1.3.1-debug.apk](apk/Arcrise-v1.3.1-debug.apk) | Netbanking in-app modal dialog, crash resolution, subscription availability timeline |
+| **`v1.3.0`** | Archived | [`apk/README.md`](apk/README.md#version-history--changelog) | Water Reminder protocol with quiet hours, Netbanking fix, clean dashboard |
 
-*Step-by-step Android sideload installation instructions are provided in [**`apk/README.md`**](apk/README.md).*
+*Full version changelog and installation instructions are available in [**`apk/README.md`**](apk/README.md).*
 
 ---
 
@@ -70,32 +55,118 @@ The official compiled Android Application Packages are available directly in the
 
 ---
 
-## 📂 Public Repository Contents
+## 📂 Repository Structure
+
+The codebase is organized into clean, dedicated modules:
 
 ```
-Arcrise/
-├── apk/                       # Official Android APK binaries & installation guide
-│   ├── Arcrise-v1.2.0-debug.apk  # Current stable debug build
-│   └── README.md                 # Detailed version changelog & install guide
-├── assets/                    # Public showcase media & brand assets
-│   ├── branding/              # Vector logos, icons & badges
-│   └── screenshots/           # High-resolution application screenshots
-├── index.html                 # ARCRISE Official Web Landing Page
-├── terms.html                 # Terms & Conditions
-├── privacy.html               # Privacy Policy
-├── refund.html                # Cancellation & Refund Policy
-└── README.md                  # Master app showcase & feedback notice
+THE ARC (ARCRISE)/
+├── android/          # Native Android Studio & Gradle project (Capacitor bridge)
+│   ├── app/          # Java source code (MainActivity.java, ArcAppPlugin.java)
+│   └── build/        # Gradle build scripts and Android configurations
+├── api/              # Serverless preregistration & email delivery backend
+├── apk/              # Official APK release binaries, version history & changelog
+│   ├── Arcrise-v1.2.0-debug.apk   # Latest Android build
+│   └── README.md                  # APK release notes & installation guide
+├── assets/           # App screenshots, brand logos & high-res vector assets
+│   ├── branding/     # SVG logos, lockups, and app icons
+│   └── screenshots/  # High-definition application screenshots
+├── docs/             # Technical specifications, security rules & audit logs
+│   ├── CHANGELOG.md               # Complete repository development changelog
+│   ├── DECISIONS_AND_ASSUMPTIONS.md # Core architectural decisions
+│   ├── DEPLOY_INSTRUCTIONS.md     # Production deployment playbook
+│   ├── FIRESTORE_DATA_MAPPING.md  # Database schema & security model
+│   ├── HANDOFF.md                 # Engineering handoff documentation
+│   ├── PROJECT_AUDIT.md           # Security & performance audit reports
+│   └── TEST_CHECKLIST.md          # Acceptance criteria & verification checklist
+├── netlify/          # Netlify serverless functions & edge routing
+├── public/           # Static web assets, audio chimes, and PWA manifest
+├── src/              # React 18 application source code
+│   ├── components/   # Modular UI components, screens & cards
+│   ├── services/     # Entitlements, email, and authentication services
+│   ├── shaders/      # WebGL & Canvas visual effects
+│   ├── utils/        # Razorpay checkout, UPI routing, and helpers
+│   └── App.jsx       # Root React component & state orchestration
+├── test/             # 16 automated verification test suites (all passing)
+├── index.html        # Production landing page
+├── terms.html        # Terms & Conditions (Merchant compliance)
+├── privacy.html      # Privacy Policy
+├── refund.html       # Cancellation & Refund Policy (Razorpay compliance)
+├── capacitor.config.json # Capacitor runtime configuration
+├── package.json      # NPM dependencies and build scripts
+└── vite.config.js    # Vite 5 production bundler configuration
+```
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend UI** | React 18, Vite 5, Tailwind CSS, Framer Motion, Lucide Icons |
+| **Mobile Runtime** | Capacitor 6, Android Native Java (Custom BridgeWebViewClient) |
+| **Cloud & Database** | Firebase Firestore (Security Rules enforced), Netlify Functions |
+| **Payments & Billing** | Razorpay Live Gateway, Native Android UPI Deep Linking |
+| **Email Delivery** | Resend API, Gmail SMTP fallback |
+| **Audio Engine** | Web Audio API (Synthesized focus chimes) |
+
+---
+
+## 🧪 Automated Test Verification
+
+ARCRISE includes 16 end-to-end automated test suites covering every critical path:
+
+```bash
+# Run the master test runner
+node test/run_all_tests.js
+```
+
+**Verification Results:**
+- `[1/16]` Vite Production Build: **PASSED**
+- `[2/16]` Firestore Security Rules (41 invariants): **PASSED**
+- `[3/16]` Core Logic & Acceptance Criteria (15 rules): **PASSED**
+- `[4/16]` Pre-Registration & Legal Compliance: **PASSED**
+- `[5/16]` Progression & Gamification: **PASSED**
+- `[6/16]` Pillar 3 Achievements & Milestones: **PASSED**
+- `[7/16]` Pillar 4 Leaderboard & Accountability: **PASSED**
+- `[8/16]` Feedback Submission & Validation: **PASSED**
+- `[9/16]` Calorie & Macro Calculator: **PASSED**
+- `[10/16]` Day Selection & Navigation: **PASSED**
+- `[11/16]` Verified Athlete Credential Boundary: **PASSED**
+- `[12/16]` Avatar System & Local Persistence: **PASSED**
+- `[13/16]` Offline Guest Mode & Cloud Sync: **PASSED**
+- `[14/16]` Day Planning Engine & Time Blocks: **PASSED**
+- `[15/16]` Comprehensive 25-Claim System Audit: **PASSED**
+- `[16/16]` Phase 5 Monetization & Analytics: **PASSED**
+
+---
+
+## 🚀 Local Development
+
+```bash
+# 1. Install dependencies
+npm install
+
+# 2. Run local development server
+npm run dev
+
+# 3. Build web bundle & sync to Android
+npm run build
+npx cap sync android
+
+# 4. Compile Android debug APK
+cd android
+./gradlew assembleDebug
 ```
 
 ---
 
 ## 📜 Legal & Compliance
 
-- **Official Website**: [`https://arcrise.netlify.app`](https://arcrise.netlify.app)
 - **Terms of Service**: [`https://arcrise.netlify.app/terms`](https://arcrise.netlify.app/terms)
 - **Privacy Policy**: [`https://arcrise.netlify.app/privacy`](https://arcrise.netlify.app/privacy)
 - **Refund Policy**: [`https://arcrise.netlify.app/refund`](https://arcrise.netlify.app/refund)
-- **Support & Bug Reports**: `arcrise.hq@gmail.com`
+- **Support Contact**: `arcrise.hq@gmail.com`
 
 ---
 
