@@ -1,6 +1,6 @@
 # ⚡ ARCRISE — Sovereign Athletic Discipline & Habit OS
 
-[![Android](https://img.shields.io/badge/Platform-Android%208.0%2B-brightgreen.svg?style=flat-square)](apk/Arcrise-v1.3.0-debug.apk)
+[![Android](https://img.shields.io/badge/Platform-Android%208.0%2B-brightgreen.svg?style=flat-square)](apk/Arcrise-v1.3.1-debug.apk)
 [![Status](https://img.shields.io/badge/Status-Beta%20Release-orange.svg?style=flat-square)](apk/)
 [![Official Website](https://img.shields.io/badge/Website-arcrise.netlify.app-gold.svg?style=flat-square)](https://arcrise.netlify.app)
 [![Support](https://img.shields.io/badge/Feedback-arcrise.hq%40gmail.com-red.svg?style=flat-square)](mailto:arcrise.hq@gmail.com)
@@ -31,7 +31,8 @@ The official compiled Android Application Packages are available directly in the
 
 | Version | Release Status | Download Link | What's Included |
 | :--- | :--- | :--- | :--- |
-| **`v1.3.0`** | **Latest (Recommended)** | [**⬇️ Download Arcrise-v1.3.0-debug.apk**](apk/Arcrise-v1.3.0-debug.apk) | Water Reminder in Pro with quiet hours & soothing chime, Netbanking WebView in-place fix, removed wake clock |
+| **`v1.3.1`** | **Latest (Recommended)** | [**⬇️ Download Arcrise-v1.3.1-debug.apk**](apk/Arcrise-v1.3.1-debug.apk) | Netbanking modal dialog WebView crash fix, Pro availability timeline & expiry display |
+| **`v1.3.0`** | Archived | [`apk/README.md`](apk/README.md#version-history--changelog) | Water Reminder in Pro with quiet hours & soothing chime, Netbanking WebView in-place fix, removed wake clock |
 | **`v1.2.0`** | Archived | [`apk/README.md`](apk/README.md#version-history--changelog) | Live Razorpay integration, Native UPI Intent routing, zero simulation bypass |
 | **`v1.1.0`** | Archived | [`apk/README.md`](apk/README.md#version-history--changelog) | Luxury porcelain light theme, athlete avatar persistence, focus timer interval bells |
 | **`v1.0.0`** | Archived | [`apk/README.md`](apk/README.md#version-history--changelog) | Initial Sovereign OS release with task matrix, workouts, and offline guest mode |

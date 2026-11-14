@@ -4,11 +4,11 @@ Official distribution channel for ARCRISE Android Application Packages (`.apk`).
 
 ---
 
-## 🚀 Current Release: `v1.3.0` (Recommended)
+## 🚀 Current Release: `v1.3.1` (Recommended)
 
 | Property | Value |
 | :--- | :--- |
-| **Filename** | `Arcrise-v1.3.0-debug.apk` |
+| **Filename** | `Arcrise-v1.3.1-debug.apk` |
 | **Package ID** | `com.thearc.app` |
 | **Target OS** | Android 8.0+ (API 26+) up to Android 14 (API 34) |
 | **Build Type** | Debug / Sideload Verified |
@@ -20,7 +20,20 @@ Official distribution channel for ARCRISE Android Application Packages (`.apk`).
 
 ## 📋 Version History & Changelog
 
-### **v1.3.0 — Water Reminder Protocol, Netbanking In-App Engine & Clean Interface** *(Latest)*
+### **v1.3.1 — Netbanking In-App Modal Dialog & Pro Availability Timeline** *(Latest)*
+- **Resolved Netbanking Fatal Crash**:
+  - Replaced WebView same-instance window transport with a dedicated full-screen `popupDialog` WebView.
+  - Added dedicated navigation bar with `🔒 Secure Bank Gateway` header and `✕ Cancel` dismiss action.
+  - Enabled third-party cookies for seamless cross-domain bank authorization and 3DS OTP redirects.
+  - Dedicated hardware back-button listener to traverse bank history or safely return without crashing.
+- **Pro Availability & Expiry Engine**:
+  - Displays complete Pro membership timeline across the app: **Activated On** start date, **Expiring On** end date, and live **Days Remaining** badge.
+  - Integrated into the Pro Subscription Hub, Athlete Profile drawer, and Pro Features matrix.
+  - Lifetime Sovereign memberships display `Permanent (Never Expires · Lifetime Sovereign Tier)`.
+
+---
+
+### **v1.3.0 — Water Reminder Protocol, Netbanking In-App Engine & Clean Interface**
 - **Sovereign Hydration Protocol (Water Reminder in Pro)**:
   - Native background notifications via Android `AlarmManager` with device reboot resilience.
   - Fully customizable reminder intervals: 30m, 45m, 60m (default), 90m, and 120m.
