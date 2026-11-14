@@ -4,23 +4,39 @@ Official distribution channel for ARCRISE Android Application Packages (`.apk`).
 
 ---
 
-## 🚀 Current Release: `v1.2.0` (Recommended)
+## 🚀 Current Release: `v1.3.0` (Recommended)
 
 | Property | Value |
 | :--- | :--- |
-| **Filename** | `Arcrise-v1.2.0-debug.apk` |
+| **Filename** | `Arcrise-v1.3.0-debug.apk` |
 | **Package ID** | `com.thearc.app` |
 | **Target OS** | Android 8.0+ (API 26+) up to Android 14 (API 34) |
 | **Build Type** | Debug / Sideload Verified |
 | **Architecture** | Universal (arm64-v8a, armeabi-v7a, x86_64) |
-| **Size** | ~72.5 MB |
+| **Size** | ~68 MB |
 | **Release Date** | November 2026 |
 
 ---
 
 ## 📋 Version History & Changelog
 
-### **v1.2.0 — Live Payments & In-App Netbanking Engine** *(Latest)*
+### **v1.3.0 — Water Reminder Protocol, Netbanking In-App Engine & Clean Interface** *(Latest)*
+- **Sovereign Hydration Protocol (Water Reminder in Pro)**:
+  - Native background notifications via Android `AlarmManager` with device reboot resilience.
+  - Fully customizable reminder intervals: 30m, 45m, 60m (default), 90m, and 120m.
+  - Configurable Sleep Window (Quiet Hours): Silence notifications between set hours (e.g. 10:00 PM to 07:00 AM) so your sleep is never disturbed.
+  - Pleasant and soothing custom audio notification tone (`arc_water_chime.mp3`) with gentle acoustic resonance.
+  - 1-tap quick glass logging with daily midnight intake reset and real-time hydration meter.
+- **Fixed Netbanking & 3DS Mobile Navigation**:
+  - Eliminated external browser chooser dialogs ("Open with Chrome / Brave / Internet").
+  - In-place WebView popup management routes all bank OTP, 3DS authentication, and Razorpay redirects securely inside the app.
+  - Backward navigation safety prevents unexpected app exits while on bank gateways.
+- **Removed Target Wake Clock**: Completely removed the wake slider from the Today dashboard for a streamlined, focused interface.
+- **Protected Pro Entitlements**: Eliminated any unverified bypass buttons. Direct UPI transactions now require 12-digit UTR verification.
+
+---
+
+### **v1.2.0 — Live Payments & In-App Netbanking Engine**
 - **In-App Netbanking & 3DS**: Bank login portals and OTP verification now load seamlessly inside the application WebView without triggering external browser prompts.
 - **Native UPI Intent Interception**: Single-tap routing for Google Pay, PhonePe, Paytm, and BHIM with automatic package fallback.
 - **Production Payment Integration**: Direct Razorpay Live Key (`rzp_live_...`) integration and manual UPI route to `02md.azhar@okaxis`.
