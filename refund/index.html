@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Cancellation &amp; Refund Policy — The Arc</title>
+<meta name="description" content="Cancellation and Refund Policy of The Arc. Transparent billing, 7-day money-back guarantee, and subscription management." />
+<meta name="theme-color" content="#0B0B0F" />
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/branding/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/branding/apple-touch-icon.png" />
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+  :root {
+    --bg: #0B0B0F;
+    --panel: rgba(255, 255, 255, 0.035);
+    --panel-elevated: #15151E;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-highlight: rgba(255, 255, 255, 0.16);
+    --violet: #7C5CFF;
+    --ember: #FF1E3C;
+    --gold: #D4AF37;
+    --text: #F5F5F7;
+    --muted: #8E99AA;
+    --faint: #646E7E;
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.7;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--ember); text-decoration: none; transition: color 0.2s; }
+  a:hover { color: #FF4D66; text-decoration: underline; }
+  a:focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; border-radius: 4px; }
+
+  h1, h2, h3, .display {
+    font-family: 'Oswald', Arial, sans-serif;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .nav-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 12, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+  }
+
+  .nav-container {
+    max-width: 840px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text);
+    font-family: 'Oswald', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+  }
+  .brand-link:hover { text-decoration: none; opacity: 0.9; }
+
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .back-btn:hover {
+    color: var(--text);
+    border-color: var(--border-highlight);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .content-wrap {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .doc-hero {
+    margin-bottom: 40px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .doc-hero h1 {
+    font-size: 38px;
+    margin: 0 0 10px;
+    line-height: 1.15;
+  }
+
+  .doc-meta {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .section-block {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 28px;
+    margin-bottom: 24px;
+  }
+
+  .section-block h2 {
+    font-size: 20px;
+    margin: 0 0 16px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-block p, .section-block ul {
+    margin: 0 0 14px;
+    color: #D1D5DB;
+  }
+  .section-block p:last-child { margin-bottom: 0; }
+  .section-block ul { padding-left: 20px; }
+  .section-block li { margin-bottom: 8px; }
+
+  .pricing-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: #FBBF24;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  .footer-legal {
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--faint);
+  }
+  .footer-legal a {
+    color: var(--muted);
+    margin: 0 8px;
+  }
+  .footer-legal a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<header class="nav-header">
+  <div class="nav-container">
+    <a href="./" class="brand-link">
+      <span style="color: var(--gold); font-size: 20px;">▲</span>
+      <span>THE ARC</span>
+    </a>
+    <a href="./" class="back-btn">← Back to Overview</a>
+  </div>
+</header>
+
+<main class="content-wrap">
+  <div class="doc-hero">
+    <h1>CANCELLATION &amp; REFUND POLICY</h1>
+    <div class="doc-meta">Effective Date: November 14, 2026 · ARCRISE Protocol Operations</div>
+  </div>
+
+  <div class="section-block">
+    <h2>1. Overview &amp; Pricing Tiers</h2>
+    <p>
+      At ARCRISE, our goal is to help you master discipline, workouts, and daily progression. All core habit tracking, daily schedules, workouts, and standard tools are permanently free.
+    </p>
+    <p>
+      For athletes seeking advanced analytics, 90-day macrocycles, and category radar insights, we offer optional ARCRISE Pro membership plans:
+    </p>
+    <ul>
+      <li><strong>ARCRISE Pro — Monthly:</strong> <span class="pricing-badge">₹79 / month</span> — Billed monthly. Auto-renews until cancelled.</li>
+      <li><strong>ARCRISE Pro — Annual:</strong> <span class="pricing-badge">₹599 / year</span> — Billed annually (~37% savings). Auto-renews until cancelled.</li>
+      <li><strong>ARCRISE Sovereign — Lifetime:</strong> <span class="pricing-badge">₹1,499 one-time</span> — Permanent offline &amp; cloud access. Never recurs.</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>2. Cancellation Policy</h2>
+    <p>
+      You may cancel your recurring subscription (Monthly or Annual) at any time with immediate effect:
+    </p>
+    <ul>
+      <li><strong>In-App:</strong> Navigate to <em>Athlete Profile &gt; The Arc Pro &gt; Manage Membership &amp; Billing</em> and select <em>Cancel Subscription</em>.</li>
+      <li><strong>Email Support:</strong> Send a cancellation request from your registered email address to <a href="mailto:arcrise.hq@gmail.com">arcrise.hq@gmail.com</a>.</li>
+    </ul>
+    <p>
+      Upon cancellation, no further renewal payments will be charged. You will retain full access to all Pro features until the end of your current paid billing period.
+    </p>
+  </div>
+
+  <div class="section-block">
+    <h2>3. 7-Day Money-Back Guarantee (Refund Policy)</h2>
+    <p>
+      We offer an unconditional <strong>7-Day Money-Back Guarantee</strong> on all initial membership purchases:
+    </p>
+    <ul>
+      <li>If you are not satisfied with your experience for any reason, request a refund within <strong>7 days</strong> of your initial transaction.</li>
+      <li>To initiate a refund, email <a href="mailto:arcrise.hq@gmail.com">arcrise.hq@gmail.com</a> with your registered email address and payment reference ID.</li>
+      <li>No questions asked. Once approved, your refund will be processed and returned to your original payment method (UPI, Bank Account, or Card) within <strong>5 to 7 business days</strong> as per banking norms.</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>4. Duplicate or Failed Transactions</h2>
+    <p>
+      If your account was debited for a transaction that failed to activate your Pro status, or if an accidental duplicate charge occurred, our automated reconciliation will detect it or you can notify us immediately at <a href="mailto:arcrise.hq@gmail.com">arcrise.hq@gmail.com</a>. Duplicate charges are refunded in full within 24–48 hours.
+    </p>
+  </div>
+
+  <div class="section-block">
+    <h2>5. Contact Us</h2>
+    <p>
+      For all billing inquiries, cancellation requests, or payment assistance, contact:
+    </p>
+    <p>
+      <strong>ARCRISE Support Team</strong><br />
+      Email: <a href="mailto:arcrise.hq@gmail.com">arcrise.hq@gmail.com</a><br />
+      Website: <a href="https://arcrise.netlify.app">arcrise.netlify.app</a>
+    </p>
+  </div>
+</main>
+
+<footer class="footer-legal">
+  <div style="margin-bottom: 12px;">
+    <a href="./">Home</a> &nbsp;·&nbsp;
+    <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="terms.html">Terms &amp; Conditions</a> &nbsp;·&nbsp;
+    <a href="refund.html">Cancellation &amp; Refund Policy</a>
+  </div>
+  <p>© 2026 The Arc. All rights reserved. Personal progression &amp; athletic discipline.</p>
+</footer>
+
+</body>
+</html>

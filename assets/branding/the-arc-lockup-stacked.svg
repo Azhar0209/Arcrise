@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="lsFacetLit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#E2E8F2"/>
+      <stop offset="70%" stop-color="#BAC5D5"/>
+      <stop offset="100%" stop-color="#8C98AA"/>
+    </linearGradient>
+    <linearGradient id="lsFacetShaded" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CBD4E2"/>
+      <stop offset="35%" stop-color="#7A879A"/>
+      <stop offset="75%" stop-color="#444D5C"/>
+      <stop offset="100%" stop-color="#262D38"/>
+    </linearGradient>
+    <linearGradient id="lsArcBody" x1="5%" y1="95%" x2="95%" y2="15%">
+      <stop offset="0%" stop-color="#444D5C"/>
+      <stop offset="25%" stop-color="#7A879A"/>
+      <stop offset="55%" stop-color="#BAC5D5"/>
+      <stop offset="85%" stop-color="#E8EEF8"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="lsArcRim" x1="10%" y1="80%" x2="95%" y2="25%">
+      <stop offset="0%" stop-color="#7A879A" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="75%" stop-color="#FFE0B8" stop-opacity="1"/>
+      <stop offset="90%" stop-color="#FFAE52" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FF8A00" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lsTextSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#E4E9F2"/>
+      <stop offset="100%" stop-color="#A2AEBF"/>
+    </linearGradient>
+    <filter id="lsDrop" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Centered Symbol (scaled 1.4x) -->
+  <g transform="translate(242, 100) scale(1.4)" filter="url(#lsDrop)">
+    <path d="M 256.0,96.0
+L 256.0,188.0
+L 207.8,267.0
+C 172.0,278.0 144.0,298.0 121.9,320.0
+Z" fill="url(#lsFacetLit)"/>
+    <path d="M 256.0,96.0
+L 359.2,264.0
+C 340.0,258.0 322.0,256.0 307.5,260.0
+L 256.0,188.0
+Z" fill="url(#lsFacetShaded)"/>
+    <path d="M 60.0,416.0
+L 112.7,330.0
+C 152.0,285.0 216.0,268.0 296.0,269.0
+C 356.0,270.0 410.0,292.0 456.0,334.0
+C 410.0,302.0 356.0,283.0 296.0,283.0
+C 220.0,283.0 155.0,335.0 115.0,409.0
+L 60.0,416.0
+Z" fill="url(#lsArcBody)"/>
+    <path d="M 112.7,330.0
+C 152.0,285.0 216.0,268.0 296.0,269.0
+C 356.0,270.0 410.0,292.0 456.0,334.0
+C 451.0,335.5 407.0,295.0 296.0,272.0
+C 216.0,271.0 154.0,287.0 114.7,331.5
+Z" fill="url(#lsArcRim)"/>
+    <path d="M 333.0,296.0
+C 345.0,298.0 356.0,301.0 365.0,304.0
+L 421.0,411.0
+L 397.0,409.0
+Z" fill="url(#lsFacetLit)"/>
+    <path d="M 365.0,304.0
+L 383.4,304.0
+L 452.0,416.0
+L 421.0,411.0
+Z" fill="url(#lsFacetShaded)"/>
+  </g>
+
+  <!-- Typography: THE ARC (Centered) -->
+  <g transform="translate(240, 940) scale(1.1)" fill="url(#lsTextSilver)">
+    <path d="M 0 0 H 66 V 18 H 45 V 96 H 21 V 18 H 0 Z"/>
+    <path d="M 96 0 H 117 V 38 H 168 V 0 H 189 V 96 H 168 V 56 H 117 V 96 H 96 Z"/>
+    <path d="M 222 0 H 288 V 18 H 243 V 38 H 282 V 56 H 243 V 78 H 288 V 96 H 222 Z"/>
+    <path d="M 372 96 L 418 0 L 464 96 L 441 96 L 418 48 L 395 96 Z"/>
+    <path d="M 498 0 H 552 C 576 0 594 14 594 36 C 594 51 582 62 567 66 L 600 96 H 573 L 543 68 H 520 V 96 H 498 Z M 520 18 V 50 H 549 C 564 50 572 44 572 34 C 572 24 564 18 549 18 Z"/>
+    <path d="M 684 20 C 670 7 651 0 630 0 C 592 0 564 28 564 48 C 564 68 592 96 630 96 C 651 96 670 89 684 76 L 696 90 C 678 105 655 114 630 114 C 576 114 542 78 542 48 C 542 18 576 -18 630 -18 C 655 -18 678 -9 696 6 Z" transform="translate(70, 0)"/>
+  </g>
+
+  <!-- Tagline: BETTER EVERY DAY -->
+  <text x="600" y="1140" text-anchor="middle" fill="#8E99AA" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="700" letter-spacing="12">BETTER EVERY DAY</text>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pFacetLit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#E2E8F2"/>
+      <stop offset="70%" stop-color="#BAC5D5"/>
+      <stop offset="100%" stop-color="#8C98AA"/>
+    </linearGradient>
+    <linearGradient id="pFacetShaded" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CBD4E2"/>
+      <stop offset="35%" stop-color="#7A879A"/>
+      <stop offset="75%" stop-color="#444D5C"/>
+      <stop offset="100%" stop-color="#262D38"/>
+    </linearGradient>
+    <linearGradient id="pArcBody" x1="5%" y1="95%" x2="95%" y2="15%">
+      <stop offset="0%" stop-color="#444D5C"/>
+      <stop offset="25%" stop-color="#7A879A"/>
+      <stop offset="55%" stop-color="#BAC5D5"/>
+      <stop offset="85%" stop-color="#E8EEF8"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="pArcRim" x1="10%" y1="80%" x2="95%" y2="25%">
+      <stop offset="0%" stop-color="#7A879A" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="75%" stop-color="#FFE0B8" stop-opacity="1"/>
+      <stop offset="90%" stop-color="#FFAE52" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FF8A00" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="pDrop" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <g filter="url(#pDrop)">
+    <!-- Upper Chevron -->
+    <path d="M 256.0,96.0
+L 256.0,188.0
+L 207.8,267.0
+C 172.0,278.0 144.0,298.0 121.9,320.0
+Z" fill="url(#pFacetLit)"/>
+    <path d="M 256.0,96.0
+L 359.2,264.0
+C 340.0,258.0 322.0,256.0 307.5,260.0
+L 256.0,188.0
+Z" fill="url(#pFacetShaded)"/>
+    
+    <!-- Sweeping Arc -->
+    <path d="M 60.0,416.0
+L 112.7,330.0
+C 152.0,285.0 216.0,268.0 296.0,269.0
+C 356.0,270.0 410.0,292.0 456.0,334.0
+C 410.0,302.0 356.0,283.0 296.0,283.0
+C 220.0,283.0 155.0,335.0 115.0,409.0
+L 60.0,416.0
+Z" fill="url(#pArcBody)"/>
+    <path d="M 112.7,330.0
+C 152.0,285.0 216.0,268.0 296.0,269.0
+C 356.0,270.0 410.0,292.0 456.0,334.0
+C 451.0,335.5 407.0,295.0 296.0,272.0
+C 216.0,271.0 154.0,287.0 114.7,331.5
+Z" fill="url(#pArcRim)"/>
+    
+    <!-- Lower Right Leg -->
+    <path d="M 333.0,296.0
+C 345.0,298.0 356.0,301.0 365.0,304.0
+L 421.0,411.0
+L 397.0,409.0
+Z" fill="url(#pFacetLit)"/>
+    <path d="M 365.0,304.0
+L 383.4,304.0
+L 452.0,416.0
+L 421.0,411.0
+Z" fill="url(#pFacetShaded)"/>
+  </g>
+</svg>

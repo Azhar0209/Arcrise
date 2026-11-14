@@ -1,0 +1,68 @@
+# Private developer source & backend (kept on local Mac only, never in public release)
+android/
+src/
+api/
+netlify/
+docs/
+test/
+app/
+public/
+capacitor.config.json
+vite.config.js
+package.json
+package-lock.json
+firestore.rules
+netlify.toml
+.well-known/
+404.html
+robots.txt
+.env.example
+*.log
+
+# === Signing keys & Secrets ===
+*.jks
+*.keystore
+*.p12
+*.key
+*.pem
+google-services.json
+.env
+.env.*
+data/
+*.csv
+rzp-key.csv
+
+# === Build artifacts ===
+node_modules/
+build/
+dist/
+.gradle/
+*.apk
+!apk/*.apk
+*.aab
+*.iml
+test/babel.min.js
+scratch/
+backups/
+
+# === Large Media & Video Reels ===
+*.mp4
+*.mov
+*.wav
+
+# === Legacy workspace backups ===
+THE ARC UPDATED*/
+ARC SITE ALL/
+cleanyourtv*/
+flowstate*/
+unslop/
+.agent/
+.agents/
+.node-version
+scripts/
+functions/
+scratch_plugin_method.txt
+bencho_watcher.js
+audit_contact_sheet.png
+skills-lock.json
+mcp.json

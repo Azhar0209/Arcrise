@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Privacy Policy — The Arc</title>
+<meta name="description" content="Privacy Policy of The Arc. Clear, honest disclosure of pre-registration email collection, in-app storage, and user rights." />
+<meta name="theme-color" content="#0B0B0F" />
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/branding/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/branding/apple-touch-icon.png" />
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+  :root {
+    --bg: #0B0B0F;
+    --panel: rgba(255, 255, 255, 0.035);
+    --panel-elevated: #15151E;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-highlight: rgba(255, 255, 255, 0.16);
+    --violet: #7C5CFF;
+    --ember: #FF1E3C;
+    --gold: #D4AF37;
+    --text: #F5F5F7;
+    --muted: #8E99AA;
+    --faint: #646E7E;
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.7;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--ember); text-decoration: none; transition: color 0.2s; }
+  a:hover { color: #FF4D66; text-decoration: underline; }
+  a:focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; border-radius: 4px; }
+
+  h1, h2, h3, .display {
+    font-family: 'Oswald', Arial, sans-serif;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .nav-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 12, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+  }
+
+  .nav-container {
+    max-width: 840px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text);
+    font-family: 'Oswald', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+  }
+  .brand-link:hover { text-decoration: none; opacity: 0.9; }
+
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .back-btn:hover {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: var(--border-highlight);
+    text-decoration: none;
+  }
+
+  .main-content {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 60px 24px 100px;
+  }
+
+  .legal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--ember);
+    background: rgba(255, 30, 60, 0.1);
+    border: 1px solid rgba(255, 30, 60, 0.25);
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  h1.page-title {
+    font-size: clamp(34px, 5vw, 48px);
+    line-height: 1.05;
+    margin: 0 0 14px;
+  }
+
+  .meta-info {
+    color: var(--muted);
+    font-size: 13.5px;
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .privacy-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin: 28px 0;
+  }
+  .privacy-card h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+    color: var(--text);
+  }
+  .privacy-card p {
+    margin: 0;
+    color: #C0C0C8;
+    font-size: 14px;
+  }
+
+  .section-block {
+    margin-bottom: 38px;
+  }
+
+  .section-block h2 {
+    font-size: 22px;
+    margin: 0 0 14px;
+    color: #FFFFFF;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 8px;
+  }
+
+  .section-block p, .section-block li {
+    color: #D6D6DC;
+  }
+
+  .section-block ul {
+    padding-left: 20px;
+    margin: 14px 0;
+  }
+
+  .section-block li {
+    margin-bottom: 8px;
+  }
+
+  .footer-legal {
+    border-top: 1px solid var(--border);
+    padding: 40px 24px;
+    text-align: center;
+    color: var(--faint);
+    font-size: 12.5px;
+    background: #070709;
+  }
+  .footer-legal a { color: var(--muted); margin: 0 10px; }
+  .footer-legal a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<header class="nav-header">
+  <div class="nav-container">
+    <a href="./" class="brand-link" aria-label="The Arc Home">
+      <img src="assets/branding/the-arc-symbol-primary.png" width="34" height="28" alt="The Arc Logo" style="object-fit: contain; vertical-align: middle;" />
+      <span>THE ARC</span>
+    </a>
+    <a href="./" class="back-btn">← Back to Overview</a>
+  </div>
+</header>
+
+<main class="main-content">
+  <div class="legal-badge">Transparency &amp; Data Rights</div>
+  <h1 class="page-title">Privacy Policy</h1>
+  <div class="meta-info">
+    Effective Date: October 1, 2026 &nbsp;·&nbsp; Last Updated: October 16, 2026
+  </div>
+
+  <div class="privacy-card">
+    <h3>Our Core Principle: Zero Data Brokering</h3>
+    <p>
+      The Arc is designed to help you build personal discipline and athletic capability. We do not sell your personal data, rent user lists, or monetize your activity through behavioral advertising brokers. We collect only what is strictly necessary to run the service.
+    </p>
+  </div>
+
+  <div class="section-block">
+    <h2>1. Information Collected During Pre-Registration</h2>
+    <p>
+      When you pre-register on this website to receive launch availability notifications, we collect:
+    </p>
+    <ul>
+      <li><strong>Email Address:</strong> Used exclusively to deliver your pre-registration confirmation email and subsequent launch notifications.</li>
+      <li><strong>Submission Timestamp:</strong> The exact date and time your request was recorded.</li>
+      <li><strong>Network Verification &amp; Security Data:</strong> A hashed identifier of your client IP address and user-agent string, retained temporarily to prevent automated spam abuse and enforce rate limits.</li>
+    </ul>
+    <p>
+      We do not collect names, payment card details, phone numbers, or physical mailing addresses on this pre-registration landing page.
+    </p>
+  </div>
+
+  <div class="section-block">
+    <h2>2. Information Collected Inside The Arc Application</h2>
+    <p>
+      When you use The Arc progressive web application, data handling depends on your session type:
+    </p>
+    <ul>
+      <li><strong>Offline Guest Mode:</strong> If you choose "Continue as Guest", 100% of your task completions, streak calculations, custom routines, and points are stored strictly on your local device in browser <code>localStorage</code>. No personal data or habit history is transmitted to our cloud backend in Guest Mode.</li>
+      <li><strong>Authenticated Cloud Accounts:</strong> When you register an account, your profile data (display name, email address, password hash via Firebase Authentication), completed daily tasks, streak counts, all-time XP, and optional avatar image are synchronized to Google Cloud Firestore database so you can access your progress across devices.</li>
+      <li><strong>Leaderboard Display:</strong> If you participate in the community leaderboard, only your display name and verified daily/all-time points are visible to other community members. Your email address is never made public.</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>3. Purpose of Processing</h2>
+    <p>We process your data strictly for legitimate operational purposes:</p>
+    <ul>
+      <li>Delivering pre-registration confirmations and launch availability notifications.</li>
+      <li>Authenticating your account and synchronizing daily habit records.</li>
+      <li>Calculating streaks, completion heatmaps, and leaderboard rankings.</li>
+      <li>Protecting platform infrastructure from malicious attacks, botting, and spam.</li>
+      <li>Responding to user-submitted help inquiries and bug reports.</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>4. Third-Party Service Providers</h2>
+    <p>
+      We use trusted cloud infrastructure providers to operate The Arc. These providers are bound by strict data processing and confidentiality agreements:
+    </p>
+    <ul>
+      <li><strong>Google Cloud &amp; Firebase (Google LLC):</strong> Cloud Firestore database, user authentication, and application hosting infrastructure.</li>
+      <li><strong>Transactional Email Provider (e.g. Resend / MailerLite):</strong> Secure delivery of pre-registration confirmation messages and product release emails.</li>
+      <li><strong>Web Hosting (GitHub Pages / Netlify):</strong> Static asset delivery and serverless API execution.</li>
+    </ul>
+    <p>
+      We never permit these infrastructure providers to use your information for their own independent marketing or to sell it to third parties.
+    </p>
+  </div>
+
+  <div class="section-block">
+    <h2>5. Data Retention</h2>
+    <p>
+      Pre-registration email addresses are retained until The Arc reaches general availability or until you request removal. In-app account data is retained for as long as your account remains active. If you delete your account, your profile, progress history, and leaderboard records are purged from our database.
+    </p>
+  </div>
+
+  <div class="section-block">
+    <h2>6. Your Rights &amp; Permanent Erasure</h2>
+    <p>
+      Regardless of your geographic location, you possess full control over your data:
+    </p>
+    <ul>
+      <li><strong>Unsubscribe:</strong> Every launch notification email includes a direct, one-click unsubscribe mechanism. You may also email us directly to request immediate removal.</li>
+      <li><strong>Right to Deletion (Right to be Forgotten):</strong> In the application, authenticated users can permanently delete all account records, calendar history, and leaderboard entries via Settings &gt; "Delete my data".</li>
+      <li><strong>Right to Access:</strong> You can request a summary of the personal information we hold associated with your email address.</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>7. Security Practices and Technical Safeguards</h2>
+    <p>
+      We implement industry-standard technical measures to safeguard your personal data:
+    </p>
+    <ul>
+      <li>All data transmitted between your browser and our servers is encrypted in transit using Transport Layer Security (TLS/HTTPS).</li>
+      <li>Firestore databases are protected with role-based security rules and least-privilege access policies.</li>
+      <li>API keys and administrative secrets are isolated in server-side environment variables and are never exposed in client source code.</li>
+    </ul>
+    <p>
+      <em>Please note:</em> While we implement rigorous protections, no method of electronic storage or internet transmission is 100% infallible. We encourage users to maintain unique passwords and practice good digital hygiene.
+    </p>
+  </div>
+
+  <div class="section-block">
+    <h2>8. Children's Privacy</h2>
+    <p>
+      The Arc is intended for general audiences aged 13 and older (or 16 and older in jurisdictions where local privacy regulations require higher age thresholds). We do not knowingly collect or solicit personal data from children under these age limits. If we become aware that personal data from a child has been collected, we will take immediate steps to delete it.
+    </p>
+  </div>
+
+  <div class="section-block">
+    <h2>9. Changes to This Privacy Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time to reflect product updates, infrastructure modifications, or legal standards. Changes will be posted to this URL with an updated "Last Updated" timestamp.
+    </p>
+  </div>
+
+  <div class="section-block">
+    <h2>10. Contacting Us</h2>
+    <p>
+      For privacy inquiries, data deletion requests, or questions regarding our information practices, please contact us:
+    </p>
+    <p>
+      Support &amp; Privacy Inquiries: <a href="mailto:thearcapphq@gmail.com" style="color: var(--accent); text-decoration: underline;">thearcapphq@gmail.com</a><br />
+      In-App: Profile &gt; Help &amp; Feedback in The Arc application.
+    </p>
+  </div>
+</main>
+
+<footer class="footer-legal">
+  <div style="margin-bottom: 12px;">
+    <a href="./">Home</a> &nbsp;·&nbsp;
+    <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="terms.html">Terms &amp; Conditions</a> &nbsp;·&nbsp;
+    <a href="refund.html">Cancellation &amp; Refund Policy</a>
+  </div>
+  <p>© 2026 The Arc. All rights reserved. Personal progression &amp; athletic discipline.</p>
+</footer>
+
+</body>
+</html>

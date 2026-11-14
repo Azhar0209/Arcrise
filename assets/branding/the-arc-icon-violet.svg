@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="vFacetLit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#E2E6FF"/>
+      <stop offset="70%" stop-color="#B2A4FF"/>
+      <stop offset="100%" stop-color="#7C5CFF"/>
+    </linearGradient>
+    <linearGradient id="vFacetShaded" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9C8CFF"/>
+      <stop offset="40%" stop-color="#5535E8"/>
+      <stop offset="80%" stop-color="#2D1794"/>
+      <stop offset="100%" stop-color="#180B52"/>
+    </linearGradient>
+    <linearGradient id="vArcBody" x1="5%" y1="95%" x2="95%" y2="15%">
+      <stop offset="0%" stop-color="#261280"/>
+      <stop offset="30%" stop-color="#5535E8"/>
+      <stop offset="65%" stop-color="#7C5CFF"/>
+      <stop offset="85%" stop-color="#C5BAFF"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="vArcRim" x1="10%" y1="80%" x2="95%" y2="25%">
+      <stop offset="0%" stop-color="#7C5CFF" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#B29CFF" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="88%" stop-color="#A5EDFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#3CE0FF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vSquircleBg" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#1A1336"/>
+      <stop offset="65%" stop-color="#0E0A1E"/>
+      <stop offset="100%" stop-color="#07050E"/>
+    </radialGradient>
+    <linearGradient id="vSquircleBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C5CFF" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#4B2BE8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1F1168" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="vNeonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="16" flood-color="#7C5CFF" flood-opacity="0.65"/>
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Squircle Base -->
+  <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#vSquircleBg)" stroke="url(#vSquircleBorder)" stroke-width="2.5"/>
+  <circle cx="256" cy="300" r="140" fill="#7C5CFF" opacity="0.22" filter="blur(40px)"/>
+
+  <!-- Logo Mark -->
+  <g filter="url(#vNeonGlow)">
+    <path d="M 256.0,96.0
+L 256.0,188.0
+L 207.8,267.0
+C 172.0,278.0 144.0,298.0 121.9,320.0
+Z" fill="url(#vFacetLit)"/>
+    <path d="M 256.0,96.0
+L 359.2,264.0
+C 340.0,258.0 322.0,256.0 307.5,260.0
+L 256.0,188.0
+Z" fill="url(#vFacetShaded)"/>
+    
+    <path d="M 60.0,416.0
+L 112.7,330.0
+C 152.0,285.0 216.0,268.0 296.0,269.0
+C 356.0,270.0 410.0,292.0 456.0,334.0
+C 410.0,302.0 356.0,283.0 296.0,283.0
+C 220.0,283.0 155.0,335.0 115.0,409.0
+L 60.0,416.0
+Z" fill="url(#vArcBody)"/>
+    <path d="M 112.7,330.0
+C 152.0,285.0 216.0,268.0 296.0,269.0
+C 356.0,270.0 410.0,292.0 456.0,334.0
+C 451.0,335.5 407.0,295.0 296.0,272.0
+C 216.0,271.0 154.0,287.0 114.7,331.5
+Z" fill="url(#vArcRim)"/>
+    
+    <path d="M 333.0,296.0
+C 345.0,298.0 356.0,301.0 365.0,304.0
+L 421.0,411.0
+L 397.0,409.0
+Z" fill="url(#vFacetLit)"/>
+    <path d="M 365.0,304.0
+L 383.4,304.0
+L 452.0,416.0
+L 421.0,411.0
+Z" fill="url(#vFacetShaded)"/>
+  </g>
+</svg>

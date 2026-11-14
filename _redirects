@@ -1,0 +1,6 @@
+/api/*  /.netlify/functions/:splat  200
+/terms  /terms.html  200
+/privacy  /privacy.html  200
+/refund  /refund.html  200
+/app/*  /dist/:splat  200
+/app  /dist/index.html  200

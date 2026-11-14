@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 80" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wmSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#E2E8F2"/>
+      <stop offset="100%" stop-color="#9AA6B8"/>
+    </linearGradient>
+  </defs>
+  <!-- THE -->
+  <path d="M 10 16 H 54 V 28 H 38 V 72 H 26 V 28 H 10 Z" fill="url(#wmSilver)"/>
+  <path d="M 68 16 H 80 V 38 H 108 V 16 H 120 V 72 H 108 V 50 H 80 V 72 H 68 Z" fill="url(#wmSilver)"/>
+  <path d="M 136 16 H 180 V 27 H 148 V 38 H 176 V 49 H 148 V 61 H 180 V 72 H 136 Z" fill="url(#wmSilver)"/>
+  
+  <!-- ARC (Chevron A without crossbar) -->
+  <path d="M 234 72 L 258 16 L 282 72 L 269 72 L 258 45 L 247 72 Z" fill="url(#wmSilver)"/>
+  <path d="M 300 16 H 332 C 348 16 358 24 358 37 C 358 46 352 52 342 55 L 360 72 H 345 L 330 57 H 312 V 72 H 300 Z M 312 27 V 47 H 330 C 339 47 345 43 345 37 C 345 31 339 27 330 27 Z" fill="url(#wmSilver)"/>
+  <path d="M 416 27 C 408 19 397 15 384 15 C 362 15 348 30 348 44 C 348 58 362 73 384 73 C 397 73 408 69 416 61 L 424 70 C 413 79 399 85 384 85 C 353 85 334 66 334 44 C 334 22 353 3 384 3 C 399 3 413 9 424 18 Z" fill="url(#wmSilver)"/>
+</svg>
