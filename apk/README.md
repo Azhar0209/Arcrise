@@ -4,11 +4,11 @@ Official distribution channel for ARCRISE Android Application Packages (`.apk`).
 
 ---
 
-## 🚀 Current Release: `v1.3.1` (Recommended)
+## 🚀 Current Release: `v1.3.2` (Recommended)
 
 | Property | Value |
 | :--- | :--- |
-| **Filename** | `Arcrise-v1.3.1-debug.apk` |
+| **Filename** | `Arcrise-v1.3.2-debug.apk` |
 | **Package ID** | `com.thearc.app` |
 | **Target OS** | Android 8.0+ (API 26+) up to Android 14 (API 34) |
 | **Build Type** | Debug / Sideload Verified |
@@ -20,7 +20,25 @@ Official distribution channel for ARCRISE Android Application Packages (`.apk`).
 
 ## 📋 Version History & Changelog
 
-### **v1.3.1 — Netbanking In-App Modal Dialog & Pro Availability Timeline** *(Latest)*
+### **v1.3.2 — 3D Card Photo Customizer & Sovereign Founder Permanent Free Pro** *(Latest)*
+- **Interactive 3D Card Photo & Alignment Engine**:
+  - Replaced static initials (`MA`) on the 3D Card with the athlete's real high-resolution photograph.
+  - Added an interactive **"Adjust Card Photo (Size & Alignment)"** control panel inside the 3D Card Modal.
+  - **Dynamic Zoom & Size**: Live slider from 50% to 250% with precision `[-]` / `[+]` controls.
+  - **Horizontal Position**: Live slider from -120px to +120px with `[ ◀ ]` / `[ ▶ ]` directional nudges.
+  - **Vertical Position**: Live slider from -120px to +120px with `[ ▲ ]` / `[ ▼ ]` directional nudges.
+  - **Custom Card Upload & Reset**: Upload any photo specifically for the 3D card or 1-tap reset to profile photo.
+  - Real-time WebGL canvas updates on the swinging 3D card + 100% synchronized HD PNG download badge.
+- **24K Gold Sovereign Founder Strap**:
+  - Exclusively for the Founder, the 3D lanyard strap is woven with 24K gold metallic thread and laser-etched: `👑 ARC PROTOCOL // SOVEREIGN CREATOR // MOHAMMAD AZHAR // 000` with dual gold-stitched borders!
+- **Sovereign Founder Automatic Free Pro (Zero-Leakage Paywall)**:
+  - Cryptographically bound to Mohammad Azhar (`02md.azhar@gmail.com` / `ARC-A5YT`).
+  - Automatically grants Permanent Lifetime Sovereign Pro at ₹0 cost with zero payment gates.
+  - Strict enforcement: All unverified or mock Pro grants for non-founders are completely revoked to Free Tier. Other users must purchase via Razorpay / UPI to unlock Pro.
+
+---
+
+### **v1.3.1 — Netbanking In-App Modal Dialog & Pro Availability Timeline**
 - **Resolved Netbanking Fatal Crash**:
   - Replaced WebView same-instance window transport with a dedicated full-screen `popupDialog` WebView.
   - Added dedicated navigation bar with `🔒 Secure Bank Gateway` header and `✕ Cancel` dismiss action.
