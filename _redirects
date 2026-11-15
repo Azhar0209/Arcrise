@@ -1,6 +1,26 @@
-/api/*  /.netlify/functions/:splat  200
-/terms  /terms.html  200
-/privacy  /privacy.html  200
-/refund  /refund.html  200
-/app/*  /dist/:splat  200
-/app  /dist/index.html  200
+# Arc Security blocks
+/.env*            /404.html    404!
+/.git*            /404.html    404!
+/data/*           /404.html    404!
+/package*.json    /404.html    404!
+
+# Dynamic Latest APK Download Endpoint (Always serves the latest APK)
+/download         /.netlify/functions/download-latest    302!
+/download/latest  /.netlify/functions/download-latest    302!
+/apk/latest       /.netlify/functions/download-latest    302!
+
+# API Functions
+/api/*            /.netlify/functions/:splat    200
+
+# Clean legal routes
+/terms            /terms.html                   200
+/privacy          /privacy.html                 200
+/refund           /refund.html                  200
+
+# Web app routes
+/app/*            /dist/:splat                  200
+/app              /dist/index.html              200
+
+# GitHub external shortcuts
+/releases         https://github.com/Azhar0209/Arcrise/releases 302
+/github           https://github.com/Azhar0209/Arcrise 302

@@ -2469,6 +2469,116 @@
   transform: translateY(-2px);
   color: #FFFFFF;
 }
+.btn-github-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px 22px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-github-check:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+.btn-github-check.checking .check-spin-icon {
+  animation: spinCheck 0.8s linear infinite;
+}
+@keyframes spinCheck {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.android-github-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #10B981;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  transition: all 0.25s ease;
+}
+.android-github-status-pill .github-sync-icon {
+  display: inline-block;
+  font-size: 10px;
+}
+.github-release-card {
+  margin-top: 20px;
+  background: #111116;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 20px 24px;
+  text-align: left;
+}
+.release-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.release-tag-badge {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+}
+.release-date-badge {
+  font-size: 12px;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.release-notes-wrap {
+  margin-bottom: 16px;
+}
+.release-notes-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-secondary);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+.release-notes-list li {
+  margin-bottom: 6px;
+}
+.release-links-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  font-weight: 700;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 14px;
+}
+.release-direct-download {
+  color: #10B981;
+  text-decoration: none;
+}
+.release-direct-download:hover {
+  text-decoration: underline;
+}
+.release-github-link {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.release-github-link:hover {
+  color: #FFFFFF;
+}
 .android-disclaimer {
   font-size: 12.5px;
   color: var(--text-muted);
@@ -4138,7 +4248,10 @@
               <span class="android-pulse-dot"></span>
               PUBLIC TEST BUILD LIVE · ANDROID ONLY
             </span>
-            <span class="android-version-pill">APK v1.3.4 · 68 MB</span>
+            <span class="android-version-pill" id="apkVersionPill">APK v1.3.4 · 54 MB</span>
+            <span class="android-github-status-pill" id="apkGithubStatus">
+              <span class="github-sync-icon">●</span> Live GitHub Protocol
+            </span>
           </div>
 
           <h2 class="android-spotlight-title">
@@ -4173,7 +4286,7 @@
               </div>
             </div>
             <div class="android-spec-item">
-              <div class="android-spec-icon">🛡️</div>
+              <div class="android-spec-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
               <div>
                 <strong>SHA-256 Verified</strong>
                 <span>Direct debug APK build ready for safe instant sideloading</span>
@@ -4183,16 +4296,42 @@
 
           <!-- Big Action Buttons -->
           <div class="android-action-group">
-            <a href="apk/Arcrise-v1.3.4-debug.apk" class="btn-android-download" download>
+            <a href="/download" class="btn-android-download" id="apkDownloadBtn" download>
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993s-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993s-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1523-.5676.416.416 0 00-.5676.1523l-2.0223 3.503C15.5902 8.4126 13.8533 8.13 12 8.13c-1.8533 0-3.5902.2826-5.1366.8202L4.8411 5.4472a.416.416 0 00-.5676-.1523.416.416 0 00-.1523.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"></path></svg>
-              <span>Download Android APK v1.3.4</span>
-              <span class="btn-sub-badge">Latest Beta · 68 MB</span>
+              <span id="apkDownloadBtnText">Download Android APK v1.3.4</span>
+              <span class="btn-sub-badge" id="apkDownloadBtnSub">Build 134 · 54 MB</span>
             </a>
+
+            <button type="button" class="btn-github-check" id="btnCheckGithubRelease" title="Check GitHub for newer releases">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check-spin-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.19"/></svg>
+              <span>Check for Updates on GitHub</span>
+            </button>
 
             <a href="https://github.com/Azhar0209/Arcrise" target="_blank" rel="noopener noreferrer" class="btn-github-repo">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
               <span>View Source &amp; Releases on GitHub ↗</span>
             </a>
+          </div>
+
+          <!-- Dynamic Live Release Status Panel -->
+          <div class="github-release-card" id="githubReleaseCard" style="display: none;">
+            <div class="release-card-header">
+              <span class="release-tag-badge" id="releaseTagBadge">v1.3.4 (Build 134)</span>
+              <span class="release-date-badge" id="releaseDateBadge">Live on GitHub</span>
+            </div>
+            <div class="release-notes-wrap" id="releaseNotesWrap">
+              <ul class="release-notes-list">
+                <li>Sovereign Founder Gifting Suite &amp; VIP pass engine</li>
+                <li>Universal 1-tap Gift Code redemption in Profile, Pro &amp; Arc Menu</li>
+                <li>Instant obsidian skeleton dashboard loading on boot</li>
+                <li>Enhanced Quotes Deck gesture physics &amp; smooth swiping</li>
+                <li>Mandatory version enforcement &amp; update gate</li>
+              </ul>
+            </div>
+            <div class="release-links-row">
+              <a href="https://github.com/Azhar0209/Arcrise/raw/main/apk/Arcrise-v1.3.4-debug.apk" class="release-direct-download" id="releaseDirectDownloadLink" download>Download Latest APK from GitHub ↗</a>
+              <a href="https://github.com/Azhar0209/Arcrise/releases" target="_blank" rel="noopener noreferrer" class="release-github-link">View GitHub Release Archive ↗</a>
+            </div>
           </div>
 
           <div class="android-disclaimer" style="display:flex; flex-direction:column; gap:8px; margin-top:16px;">
@@ -4981,6 +5120,104 @@
     }
 
     requestAnimationFrame(updateCenterElevation);
+  })();
+
+  // 7. Live GitHub Release & Version Checker
+  (function initReleaseChecker() {
+    const GITHUB_RAW_VERSION = 'https://raw.githubusercontent.com/Azhar0209/Arcrise/main/version.json';
+    const LOCAL_VERSION_URL = 'version.json';
+
+    const pill = document.getElementById('apkVersionPill');
+    const statusPill = document.getElementById('apkGithubStatus');
+    const downloadBtn = document.getElementById('apkDownloadBtn');
+    const downloadBtnText = document.getElementById('apkDownloadBtnText');
+    const downloadBtnSub = document.getElementById('apkDownloadBtnSub');
+    const checkBtn = document.getElementById('btnCheckGithubRelease');
+    const releaseCard = document.getElementById('githubReleaseCard');
+    const releaseTagBadge = document.getElementById('releaseTagBadge');
+    const releaseDateBadge = document.getElementById('releaseDateBadge');
+    const releaseNotesWrap = document.getElementById('releaseNotesWrap');
+    const releaseDirectLink = document.getElementById('releaseDirectDownloadLink');
+
+    async function checkRelease(isUserClick = false) {
+      if (checkBtn) {
+        checkBtn.classList.add('checking');
+        const span = checkBtn.querySelector('span');
+        if (span) span.textContent = 'Checking GitHub…';
+      }
+
+      try {
+        let data = null;
+        // Priority 1: GitHub Raw version.json (instant, unauthenticated, zero rate-limit)
+        try {
+          const res = await fetch(GITHUB_RAW_VERSION + '?t=' + Date.now(), { cache: 'no-cache' });
+          if (res.ok) {
+            data = await res.json();
+          }
+        } catch (e) {}
+
+        // Priority 2: Local version.json on deployed host
+        if (!data) {
+          try {
+            const resLocal = await fetch(LOCAL_VERSION_URL + '?t=' + Date.now(), { cache: 'no-cache' });
+            if (resLocal.ok) {
+              data = await resLocal.json();
+            }
+          } catch (e) {}
+        }
+
+        if (data && data.latestVersion) {
+          const v = data.latestVersion;
+          const build = data.latestBuildNumber || 134;
+          const apkUrl = data.apkDownloadUrl || `apk/Arcrise-v${v}-debug.apk`;
+
+          if (pill) pill.textContent = `APK v${v} · 54 MB`;
+          if (downloadBtn) downloadBtn.setAttribute('href', apkUrl);
+          if (downloadBtnText) downloadBtnText.textContent = `Download Android APK v${v}`;
+          if (downloadBtnSub) downloadBtnSub.textContent = `Build ${build} · 54 MB`;
+
+          if (statusPill) {
+            statusPill.innerHTML = `<span class="github-sync-icon live">●</span> Live GitHub Protocol v${v}`;
+          }
+
+          if (releaseTagBadge) releaseTagBadge.textContent = `v${v} (Build ${build})`;
+          if (releaseDateBadge && data.publishedAt) {
+            const d = new Date(data.publishedAt);
+            releaseDateBadge.textContent = isNaN(d.getTime()) ? 'Nov 2026' : d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+          }
+          if (releaseNotesWrap && Array.isArray(data.releaseNotes)) {
+            releaseNotesWrap.innerHTML = '<ul class="release-notes-list">' + 
+              data.releaseNotes.map(n => `<li>${n}</li>`).join('') + 
+              '</ul>';
+          }
+          if (releaseDirectLink) {
+            releaseDirectLink.setAttribute('href', apkUrl);
+          }
+
+          if (isUserClick && releaseCard) {
+            releaseCard.style.display = releaseCard.style.display === 'none' ? 'block' : 'none';
+          }
+        }
+      } catch (err) {
+        console.warn('Release check error:', err);
+      } finally {
+        if (checkBtn) {
+          checkBtn.classList.remove('checking');
+          const span = checkBtn.querySelector('span');
+          if (span) span.textContent = isUserClick ? 'Checked (Up to Date ✓)' : 'Check for Updates on GitHub';
+        }
+      }
+    }
+
+    // Auto-run background sync on load
+    checkRelease(false);
+
+    // Toggle release card on click
+    if (checkBtn) {
+      checkBtn.addEventListener('click', () => {
+        checkRelease(true);
+      });
+    }
   })();
 
 })();

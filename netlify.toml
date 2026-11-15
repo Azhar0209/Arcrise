@@ -1,0 +1,101 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+  AWS_LAMBDA_JS_RUNTIME = "nodejs20.x"
+
+# Security Blocking: Shield internal secrets, configuration, and data stores from web access
+[[redirects]]
+  from = "/.env*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.git*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/data/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/package*.json"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/refund"
+  to = "/refund.html"
+  status = 200
+
+[[redirects]]
+  from = "/app/*"
+  to = "/dist/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/app"
+  to = "/dist/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/download"
+  to = "/.netlify/functions/download-latest"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/download/latest"
+  to = "/.netlify/functions/download-latest"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/apk/latest"
+  to = "/.netlify/functions/download-latest"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/releases"
+  to = "https://github.com/Azhar0209/Arcrise/releases"
+  status = 302
+
+[[redirects]]
+  from = "/github"
+  to = "https://github.com/Azhar0209/Arcrise"
+  status = 302
+
+# HTTP Security Headers for all served routes
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
